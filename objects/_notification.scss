@@ -1,0 +1,39 @@
+/**
+ * The notification pop-down
+ * that flashes a message and then
+ * disappears.
+ *
+ * DDG.Views.Notification
+ */
+
+.notification {
+    @include transition(all .2s ease-out);
+    display: table;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: -64px; // this can handle 2 lines, beyond that there might be trouble
+    width: 100%;
+    z-index: 500;
+
+    &.is-showing {
+        opacity: 0.8;
+        top: 40px;
+    }
+}
+
+    .notification__wrap {
+        display: table-cell;
+        width: 100%;
+    }
+
+        .notification__text {
+            @include border-radius(5px);
+            background: $slate;
+            color: $white;
+            display: table;
+            margin: 0 auto;
+            max-width: 300px;
+            padding: 10px 45px;
+            text-align: center;
+        }

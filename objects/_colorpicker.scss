@@ -1,0 +1,122 @@
+/*
+    DDG.Views.Settings.ColorPicker
+*/
+
+$color-picker-height: 120px;
+
+.colorpicker {
+    @include box-shadow(0 1px 4px rgba(0,0,0,0.2));
+    @include border-radius(2px);
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    background: #fff;
+    padding: 15px;
+    height: $color-picker-height;
+    width: 145px;
+    .lt-ie9 & {
+        border: 1px solid #eee;
+    }
+}
+
+.colorpicker__nub {
+    @include transform(rotate(45deg));
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    margin-top: -5px;
+    right: -6px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    .lt-ie9 & {
+        display: none;
+    }
+}
+
+.colorpicker__2d {
+    @include border-radius(4px);
+    position: relative;
+    display: block;
+    float: left;
+    width: $color-picker-height;
+    height: $color-picker-height;
+    cursor: pointer;
+}
+
+.colorpicker__2d-white,
+.colorpicker__2d-black {
+    @include border-radius(2px);
+    position: absolute;
+    width: $color-picker-height;
+    height: $color-picker-height;
+}
+
+.colorpicker__2d-white  {
+    z-index: 0;
+    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr=#FFFFFFFF, endColorstr=#00FFFFFF)";
+    filter : progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr='#FFFFFFFF', endColorstr='#00FFFFFF');
+}
+.colorpicker__2d-black {
+    @include box-shadow(inset 0 0 2px rgba(0,0,0,.2));
+    z-index: 1;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 0, startColorstr=#00000000, endColorstr=#FF000000)";
+    filter : progid:DXImageTransform.Microsoft.gradient(GradientType = 0, startColorstr='#00000000', endColorstr='#FF000000');
+}
+
+.colorpicker__2d-marker {
+    @include border-radius(6px);
+    @include box-shadow(0 1px 2px rgba(0,0,0,0.3));
+    background: #fff;
+    border: 1px solid #ddd;
+    position: absolute;
+    margin: -6px 0 0 -6px;
+    width: 10px;
+    height: 10px;
+    z-index: 2;
+}
+
+.colorpicker__1d {
+    @include border-radius(2px);
+    @include box-shadow(inset 0 0 2px rgba(0,0,0,.2));
+    position: relative;
+    display: block;
+    margin-left: 10px;
+    width: 15px;
+    float: left;
+    height: $color-picker-height;
+    cursor: pointer;
+    background: -moz-linear-gradient(top,  #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 66%, #ff00ff 83%, #ff0000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff0000), color-stop(17%,#ffff00), color-stop(33%,#00ff00), color-stop(50%,#00ffff), color-stop(66%,#0000ff), color-stop(83%,#ff00ff), color-stop(100%,#ff0000));
+    background: -webkit-linear-gradient(top,  #ff0000 0%,#ffff00 17%,#00ff00 33%,#00ffff 50%,#0000ff 66%,#ff00ff 83%,#ff0000 100%);
+    background: -o-linear-gradient(top,  #ff0000 0%,#ffff00 17%,#00ff00 33%,#00ffff 50%,#0000ff 66%,#ff00ff 83%,#ff0000 100%);
+    background: linear-gradient(top,  #ff0000 0%,#ffff00 17%,#00ff00 33%,#00ffff 50%,#0000ff 66%,#ff00ff 83%,#ff0000 100%);
+    .lt-ie10 & {
+        background: url('/assets/settings/colorpicker-1d.100.png') no-repeat;
+    }
+}
+
+.colorpicker__1d-marker {
+    @include border-radius(2px);
+    @include box-shadow(0 1px 2px rgba(0,0,0,0.3));
+    border: 1px solid #ddd;
+    position: absolute;
+    background: #fff;
+    width: 16px;
+    height: 4px;
+    margin: -2px 0 0 -1px;
+    z-index: 2;
+}
+

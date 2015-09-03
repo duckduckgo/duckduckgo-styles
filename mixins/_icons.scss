@@ -1,0 +1,176 @@
+/*
+    DuckDuckGo Icons!
+    
+    Requires that you compile the icon font yourself and
+    serve it via @font-face under the name 'ddg-serp-icons'
+*/
+
+@mixin icon($symbol: '', $no_font: null) {
+    @if $no_font == null {
+        // important so settings don't override:
+        font-family: 'ddg-serp-icons' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal !important;
+        font-variant: normal;
+        text-transform: none;
+        text-decoration: none !important;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @if $symbol == 'alert' {
+        content: "\21";
+    }
+    @if $symbol == 'arrow-top' {
+        content: "\2b06";
+    }
+    @if $symbol == 'check' {
+        content: "\2713";
+    }
+    @if $symbol == 'check-sign' {
+        content: "\2611";
+    }
+    @if $symbol == 'circle' {
+        content: "\25cf";
+    }
+    @if $symbol == 'clock' {
+        content: "\43";
+    }
+    @if $symbol == 'close' {
+        content: "\58";
+    }
+    @if $symbol == 'close-bold' {
+        content: "\d7";
+    }
+    @if $symbol == 'cloudsave' {
+        content: "\63";
+    }
+    @if $symbol == 'comment' {
+        content: "\4F";
+    }
+    @if $symbol == 'cry' {
+        content: "\2639";
+    }
+    @if $symbol == 'down' {
+        content: "\76";
+    }
+    @if $symbol == 'download' {
+        content: "\2913";
+    }
+    @if $symbol == 'eye' {
+        content: "\69";
+    }
+    @if $symbol == 'football' {
+        content: "\1f3c8";
+    }
+    @if $symbol == 'grid' {
+        content: "\47";
+    }
+    @if $symbol == 'heart' {
+        content: "\2665";
+    }
+    @if $symbol == 'home' {
+        content: "\2302";
+    }
+    @if $symbol == 'info' {
+        content: "\49";
+    }
+    @if $symbol == 'left' {
+        content: "\3c";
+    }
+    @if $symbol == 'left-big' {
+        content: "\2039";
+    }
+    @if $symbol == 'left-sign' {
+        content: "\25c1";
+    }
+    @if $symbol == 'less-sign' {
+        content: "\229d";
+    }
+    @if $symbol == 'loupe' {
+        content: "\53";
+    }
+    @if $symbol == 'marker' {
+        content: "\40";
+    }
+    @if $symbol == 'menu' {
+        content: "\21f6";
+    }
+    @if $symbol == 'minus' {
+        content: "\2d";
+    }
+    @if $symbol == 'more' {
+        content: "\2026";
+    }
+    @if $symbol == 'more-sign' {
+        content: "\2295";
+    }
+    @if $symbol == 'move' {
+        content: "\2629";
+    }
+    @if $symbol == 'music-note' {
+        content: "\266b";
+    }
+    @if $symbol == 'next' {
+        content: "\bb";
+    }
+    @if $symbol == 'pause' {
+        content: "\2551";
+    }
+    @if $symbol == 'play' {
+        content: "\25ba";
+    }
+    @if $symbol == 'plus' {
+        content: "\2b";
+    }
+    @if $symbol == 'prev' {
+        content: "\ab";
+    }
+    @if $symbol == 'region' {
+        content: "\2637";
+    }
+    @if $symbol == 'right' {
+        content: "\3e";
+    }
+    @if $symbol == 'right-big' {
+        content: "\203a";
+    }
+    @if $symbol == 'right-sign' {
+        content: "\25b7";
+    }
+    @if $symbol == 'star' {
+        content: "\2605";
+    }
+    @if $symbol == 'swap' {
+        content: "\21a9";
+    }
+    @if $symbol == 't-down' {
+        content: "\25bc";
+    }
+    @if $symbol == 't-left' {
+        content: "\25c0";
+    }
+    @if $symbol == 't-right' {
+        content: "\25b6";
+    }
+    @if $symbol == 't-up' {
+        content: "\25b2";
+    }
+    @if $symbol == 'up' {
+        content: "\5e";
+    }
+    @if $symbol == 'upload' {
+        content: "\2912";
+    }
+    @if $symbol == 'uploaded' {
+        content: "\21d1";
+    }
+    @if $symbol == 'user' {
+        content: "\75";
+    }
+    @if $symbol == 'users' {
+        content: "\55";
+    }
+}

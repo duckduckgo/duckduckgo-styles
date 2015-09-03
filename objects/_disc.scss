@@ -1,0 +1,105 @@
+/*
+    'Disc' Objects
+    
+    Generally just a simple rounded icon with an inset border.
+    
+    Can either be used as a simple wrapper, 
+    or a more complex object to clip wide images down.
+    
+    Simple Disc, Square Img Asset (e.g. Flags):
+    <div class="disc"><img class="disc__img"></div>
+    
+    Compound 'clipping' disc, for oddly shaped assets
+    <div class="disc"><span class="disc__wrap"><img class="disc__wrap__img"></span></div>
+*/
+
+// no height/width specified but it is required to display correctly
+.disc {
+    @include inset-image-border;
+    @include border-radius(100%);
+    
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+}
+
+.disc--xs {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    
+    .disc__wrap__img {
+        height: 16px;
+    }
+}
+.disc--s {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    
+    .disc__wrap__img {
+        height: 30px;
+    }
+}
+.disc--m {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    
+    .disc__wrap__img {
+        height: 40px;
+    }
+}
+.disc--l {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    
+    .disc__wrap__img {
+        height: 50px;
+    }
+}
+.disc--xl {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    
+    .disc__wrap__img {
+        height: 60px;
+    }
+}
+
+    // optional wrapper to clip wide images
+    .disc__wrap {
+        float: left;
+        display: block;
+        position: relative;
+        text-align: center;
+        left: 50%;
+    }
+        .disc__wrap__img {
+            vertical-align: middle;
+            position: relative;
+            display: inline;
+            max-width: none;
+            min-width: 1px;
+            right: 50%;
+        }
+
+    // nested img
+    .disc__img {
+        @include border-radius(50%);
+        vertical-align: middle;
+        display: inline-block;
+        max-height: 100%;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+    
+    // nested obj (sprite, etc)
+    .disc__obj {
+        @include absolute-center;
+    }

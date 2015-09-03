@@ -1,0 +1,30 @@
+/*
+    Page Anchors
+    
+    Controls for scrolling to the right spot in JS. :)
+*/
+
+.anchor,
+%anchor--inline,
+.anchor--inline {
+    position: relative;
+    display: inline-block;
+    height:0; 
+    width: 0;
+    margin: 0; 
+}
+.anchor { 
+  // vertical positioning is controlled in settings/header
+  float: left;
+}
+
+%anchor--inline,
+.anchor--inline {
+    margin-left: -0.5ex; // kill white(y)space
+    vertical-align: top;
+}
+    .anchor--inline--first {
+        @extend %anchor--inline;
+        margin-left: 0;
+    }
+

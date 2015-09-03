@@ -1,0 +1,75 @@
+/*
+    Nav Objects (Circles)
+
+    Designed for slider nav, e.g...
+
+    <span class="nav  nav--prev  js-nav-prev"></span>
+    <span class="nav  nav--next  js-nav-next"></span>
+
+*/
+
+.nav {
+    @include icon(null);
+    @include border-radius(50%);
+    @extend %no-select !optional;
+    background: #e6e6e6;
+    background: rgba(black,0.1);
+    color: #f8f8f8;
+    position: absolute;
+    top: 50%;
+    margin-top: -$nav-size/3;
+    
+    width: $nav-size;
+    height: $nav-size;
+    line-height: $nav-size;
+    
+    font-size: 28px;
+    
+    vertical-align: middle;
+    text-align: center;
+    display: block;
+    z-index: 2;
+    
+    cursor: pointer;
+    
+    &:hover {
+        background: rgba(black,0.25);
+    }
+    &:active {
+        background: rgba(black,0.5);
+    }
+    
+    .is-mobile &,
+    .touch &,
+    .no-js & {
+        display: none;
+    }
+}
+    .nav--hero {
+        @include box-shadow(inset 0 0 0 2px white);
+        background: none;
+        border: 2px solid $white;
+        border-color: rgba(0,0,0,0);
+        
+        &:hover {
+            background: none;
+        }
+    }
+
+    .nav--prev {
+        text-indent: -4px;
+        left: $nav-spacing;
+        &:before {
+            @include icon('left-big','1');
+            line-height: 1;
+        }
+    }
+    
+    .nav--next {
+        text-indent: 4px;
+        right: $nav-spacing;
+        &:before {
+            @include icon('right-big','1');
+            line-height: 1;
+        }
+    }

@@ -1,0 +1,11 @@
+{
+  "name": "duckduckgo-styles",
+  "version": "1.0.0",
+  "homepage": "https://github.com/duckduckgo/duckduckgo-styles",
+  "authors": [
+    "Brian <brian@duckduckgo.com>",
+    "Doug <doug@duckduckgo.com>"
+  ],
+  "description": "Common styling elements used by DuckDuckGo",
+  "license": "MIT"
+}

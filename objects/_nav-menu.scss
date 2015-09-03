@@ -1,0 +1,263 @@
+/*
+    Nav Menu Styling
+    
+    The .nav-menu object assumes that the navigation is vertical.
+    (.e.g slideout, dropdown)
+*/
+
+$icon-size: 1.2em;
+$icon-color: #bfbfbf;
+
+$dark-nav-bg: #313235;
+
+%nav-menu {
+    // stylish!
+    background-color: $silver;
+    background-color: rgba($silver,0.975);
+    ul {
+        padding-top: 0;
+        padding-bottom: 0;
+        list-style: none;
+    }
+    li { list-style: none; }
+}
+
+.nav-menu {
+    @extend %nav-menu;
+}
+
+.nav-menu__icon {
+    @extend %no-select !optional;
+    text-align: center; 
+    color: $icon-color;
+    font-size: $icon-size;
+    line-height: 1;
+    background-color: transparent;
+}
+.nav-menu__icon--top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.nav-menu__icon--clickable {
+    @include transition(all $default-transition-duration/2 $default-transition-function 0s);
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    z-index: 2;
+    &:hover,
+    &:focus {
+        color: #575757; 
+    }
+    &:active {
+        color: $icon-color;
+    }
+    &:visited {  // for IE :)
+        color: $icon-color;
+    }
+}
+.nav-menu__close {
+    @extend .nav-menu__icon;  
+    @extend .nav-menu__icon--top-right;
+    @extend .nav-menu__icon--clickable;
+    @include icon();
+    line-height: 1;
+    padding: $base-unit * 1.6 $base-unit $base-unit; // make the clickable area larger
+}
+
+.nav-menu__list {
+    display: block;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        position: relative;
+        top: -0.65em;
+    }
+}
+    
+.nav-menu__heading {
+    padding-top: $base-unit * 2.2;
+    padding-bottom: $base-unit * 1.6;
+    margin-bottom: -$big-unit;
+    color: $grey-dark;
+    // small title variation - just add span!
+    span  {
+        text-transform: uppercase;
+        font-size: 0.75em;
+    }
+    .is-mobile & {
+        margin-bottom: -1.5em;
+    }
+}
+    .nav-menu__heading--primary {
+        //@extend .nav-menu__heading;
+        padding-top: $double-unit;
+        margin-bottom: -$three-quarter-unit;
+    }
+    
+%nav-menu__item {
+    position: relative;
+    font-size: $t-s;
+
+    // more finger-friendly
+    .is-mobile & {
+        padding: $quarter-unit/2 0;
+        top: -$quarter-unit;
+    }
+    & > a {
+        padding: 0;
+        display: block;
+    }
+    &, & > a, & > a:visited {
+        color: $slate;
+    }
+    & > a:hover {
+        color: $slate;
+        text-decoration: underline;
+    }
+}
+.nav-menu__item {
+    @extend %nav-menu__item;
+
+    &.only--mob {
+        display: none;
+
+        .is-mobile & {
+            display:inline-block;
+        }
+    }
+}
+    // first item on the list, no heading
+    .nav-menu__item--primary {
+        padding-top: 2.05em;
+        margin-bottom: -0.75em;
+    }
+    .nav-menu__themes {
+        height: 17px;
+        padding: 12px 0 12px !important;
+    }
+        .nav-menu__theme {
+            @include border-radius(13px);
+            display: block;
+            width: 18px;
+            height: 18px;
+            padding: 3px;
+            float: left;
+            margin-right: 5px;
+            cursor: pointer;
+
+            &.theme-is-selected {
+                padding: 2px;
+                border: 1px solid $slate;
+            }
+        }
+            .nav-menu__theme-color {
+                @include border-radius(10px);
+                display: block;
+                position: relative;
+                width: 18px;
+                height: 18px;
+                overflow: hidden;
+                z-index: 1;
+            }
+
+            .nav-menu__theme-color-top,
+            .nav-menu__theme-color-bot {
+                @include rotate(45deg);
+                position: absolute;
+                display: block;
+                width: 18px;
+                height: 18px;
+            }
+            .nav-menu__theme-color-top {
+                left: -5px;
+                top: -5px;
+            }
+            .nav-menu__theme-color-bot {
+                right: -6px;
+                bottom: -6px;
+            }
+/*
+    Only want to show Region in side menu
+    on s + xs screen sizes (the sizes where the screen
+    is too narrow for it to fit on the SERP)
+ */
+
+.nav-menu--region {
+    display: none;
+}
+
+@include media-query(s) {
+    .nav-menu--region {
+        display: block;
+    }
+}
+
+/*
+    Layout Options
+*/
+    
+.nav-menu--slideout {
+    @extend %nav-menu;
+    //@extend .nav-menu--dark;
+    @include transition(transform $default-transition-duration $default-transition-function 0s);
+    @include transform( translate3d(($slideout-nav-width+$quarter-unit), 0, 0), true);
+    @include backface-visibility;
+    @include transform-style;
+    @include box-shadow(-1px 0 1px rgba(0,0,0,0.2));
+    width: $slideout-nav-width;
+    
+    display: block; // show by default so that the animation will work
+
+    // extend off the bottom of the page so that it doesn't render weird 
+    // on mobile screens that 'slide' the viewport 
+
+    height: 100%;
+    
+    /* this slideout is aligned to the right of the screen by default */
+    position: fixed;
+    
+    top: 0;
+    bottom: 0;
+    right: -$slideout-nav-width - $quarter-unit;
+    left: auto;
+    z-index: 200; // needs to be more than 100 so that it covers the fixed header
+    
+    .nav-menu__list {
+        padding-left: $base-unit * 1.5;
+        position: absolute;
+        overflow: auto;
+        overflow-x: hidden;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        
+        // extra bottom padding so that short screen people can scroll to the bottom
+        &:after {
+            content: "";
+            clear: both;
+            display: block;
+            height: 15em;
+        }
+    }
+    
+    &.is-open {
+        right: 0;
+        @include transform( translate3d(0, 0, 0), true );
+    }
+    // look for the modernizr class to confirm support for 3d transforms, 
+    // reset the positioning if available
+    .csstransforms3d & {
+        right: 0;
+    }
+    
+    // animation/positioning fixes for very specific instances:
+    // mobile touch devices that can re-orient with searchform focus and mess up positioning,
+    // and for the homepage, where bad things could also happen 
+    .is-mobile-device &,
+    .has-search-focus .site-wrapper--home & {
+        position: absolute;
+    }
+}

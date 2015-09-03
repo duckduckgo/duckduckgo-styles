@@ -1,0 +1,65 @@
+$html-font-size: 100% !default;
+
+////////////////
+// Colors (See also https://github.com/duckduckgo/duckduckgo-colors)
+
+$divider-gray: $platinum-dark;
+
+$button-bg: #fafafa;
+$button-color: $slate;
+$button-border: #dddddd;
+
+$button-bg-alt: $platinum-light;
+$button-color-alt: $slate-light;
+$button-border-alt: $platinum-darker;
+
+$button-icon-bg: #dfdfdf;
+
+$ddg-red: $red;
+$ddg-green: $green;
+$contrast-red: $red;
+$contrast-blue: $blue-light;
+$hero-red: $red-light;
+$hero-dark: $red-dark;
+$hero-link: lighten($red-light,30%);
+$hero-link-dark: #5C2D1E;
+
+$dark: $slate;
+$dark-alt: $slate-light;
+$light: $grey-dark;
+$light-alt: $grey-light;
+
+$main-bg: $white;
+$alt-bg: $silver-light;
+
+////////////////
+// Sizes
+
+$slideout-nav-width: 14em;
+
+// circle nav items
+$nav-size: 64px;
+$nav-spacing: 24px;
+
+
+///////////////
+// Media Query Break Points
+
+// Default values 
+$media--xl: 1440px !default;
+$media--l:  1079px !default;
+$media--m:  864px !default;
+$media--s:  634px !default;
+$media--xs: 425px !default;
+
+// teapot + breadbox are the same dimensions,
+// teapot uses max-width and breadbox uses min-width:
+$teapot-width: $media--s !default;
+$teapot-height: ceil($media--s * 1.25) !default;
+$breadbox-width: $teapot-width !default;
+$breadbox-height: $teapot-height !default;
+
+$landscape1-height: $media--xs * 0.75 !default;
+$landscape2-height: $media--xs * 0.9 !default;
+$landscape2-width:  $media--xs !default;
+

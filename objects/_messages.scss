@@ -1,0 +1,41 @@
+/*
+    User Messages
+    Notice banners to draw interest on content-heavy pages
+*/
+
+%msg,
+.msg {
+    @extend %max-content-width !optional;
+    @include box-sizing('border-box');
+    @include border-radius;
+    
+    display: block;
+    position: relative;
+    margin: $half-unit auto $big-unit;
+    padding: $base-unit;
+    color: $slate;
+}
+
+// styling
+.msg--box {
+    @extend %msg;
+    background: $silver-light; 
+}
+
+.msg--info {
+    @extend %msg;
+    color: shade($gold,30%);
+    background: saturate(tint($gold,75%), 75%); 
+}
+
+.msg--help,
+.msg--untranslated {
+    @extend %msg;
+    color: shade($blue-dark, 15%);
+    background: tint($blue,75%);
+}
+.msg--warning {
+    @extend %msg;
+    color: $red;
+    background: tint($red,75%);
+}
