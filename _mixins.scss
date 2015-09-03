@@ -1,0 +1,68 @@
+// Mixins
+//
+// Repeatable patterns and other inline functions
+
+// parseInt
+// required for the 'rem' mixin
+@function parseInt($n) { /* 2 */
+    @return $n / ($n * 0 + 1);
+}
+
+@import 'mixins/media-query';
+@import 'mixins/icons';
+@import 'mixins/rem';
+  
+// absolute center
+@mixin absolute-center() {
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0; 
+}
+  
+// inset transparent border like
+// used on about page team member pics + flag icons
+@mixin inset-image-border($w:2px, $o:0.15) {
+    &:before {
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: $w solid #000;
+        position: absolute;
+        opacity: $o;
+        border-radius: 100%;
+        z-index: 1;
+    }
+}
+
+// SVG Background Image
+@mixin svg($filename: '', $folder: '') {
+    background-image: url('/assets' + $folder + '/' + $filename + '.png');
+
+    .svg & {
+        background-image: url('/assets' + $folder + '/' + $filename + '.svg');
+    }
+}
+
+@mixin button() {
+    @include experimental(appearance, none); // override iOS wackyness
+    @include single-transition(none);
+    @include border-radius(0.25em);
+    outline: none !important;
+    text-decoration: none !important;
+    background-color: $button-bg;
+    border: 1px solid $button-border;
+
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
