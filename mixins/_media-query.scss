@@ -68,7 +68,10 @@
 
     @if $media-query == min-s--v-s or $media-query == teapot {
         // short and stout like a little teapot
-        @media only screen and (min-width:$teapot-width) and (max-height:($teapot-height)) { @content; }
+        // min-width to prevent this from applying to handhelds,
+        // includes a min-height to prevent this from being applied
+        // to tall phones in 'landscape' mode
+        @media only screen and (min-width:$teapot-width) and (max-height:$teapot-height) and (min-height: $media--xs) { @content; }
     }
 
     @if $media-query == reverse-teapot or $media-query == breadbox {
