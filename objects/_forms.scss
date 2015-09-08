@@ -125,7 +125,7 @@ $form-text-color: $dark;
         }
         
         &:after {
-            @include icon('down','1');
+            @include icon('down');
             
             margin-top: -5px;
             font-size: 12px;
