@@ -78,7 +78,6 @@ $form-text-color: $dark;
     .frm__select {
         @include box-sizing('border-box');
         @include border-radius();
-        @extend %ddgsi-a !optional;
         display: inline-block;
         position: relative;
         overflow: hidden;
@@ -125,7 +124,7 @@ $form-text-color: $dark;
         }
         
         &:after {
-            @include icon('down');
+            @include icon('down', '1');
             
             margin-top: -5px;
             font-size: 12px;
