@@ -116,6 +116,9 @@
     @if $symbol == 'next' {
         content: "\bb";
     }
+    @if $symbol == 'news' {
+        content: "\6e";
+    }
     @if $symbol == 'pause' {
         content: "\2551";
     }
