@@ -50,12 +50,28 @@
         @media only screen and (min-width:($media--xl * 1.35)) { @content; }
     }
 
-    @if $media-query == min-m {
-        @media only screen and (min-width:$media--m) { @content; }
-    }
-
     @if $media-query == m {
         @media only screen and (max-width:$media--m) { @content; }
+    }
+
+    @if $media-query == sm { // halfway between 'medium' and 'small'
+        @media only screen and (max-width:($media--s + ($media--m - $media--s)/2)) { @content; }
+    }
+
+    @if $media-query == s {
+        @media only screen and (max-width:$media--s) { @content; }
+    }
+
+    @if $media-query == ms {
+        @media only screen and (max-width:$media--s*0.85) { @content; }
+    }
+
+    @if $media-query == xs {
+        @media only screen and (max-width:$media--xs) { @content; }
+    }
+
+    @if $media-query == min-m {
+        @media only screen and (min-width:$media--m) { @content; }
     }
 
     @if $media-query == min-sm { // halfway between 'medium' and 'small'
@@ -66,38 +82,12 @@
         @media only screen and (min-width:$media--s) { @content; }
     }
 
-    @if $media-query == min-s--v-s or $media-query == teapot {
-        // short and stout like a little teapot
-        @media only screen and (min-width:$teapot-width) and (max-height:($teapot-height)) { @content; }
-    }
-
-    @if $media-query == reverse-teapot or $media-query == breadbox {
-        // bigger than a breadbox?
-        @media only screen and (min-width:$breadbox-width) and (min-height:$breadbox-height) { @content; }
-    }
-
-    @if $media-query == s {
-        @media only screen and (max-width:$media--s) { @content; }
-    }
-
-    @if $media-query == min-xs {
-        @media only screen and (min-width:$media--xs) { @content; }
-    }
-
     @if $media-query == min-ms {
         @media only screen and (min-width:$media--s*0.85) { @content; }
     }
 
-    @if $media-query == min-s {
-        @media only screen and (min-width:$media--s) { @content; }
-    }
-
-    @if $media-query == ms {
-        @media only screen and (max-width:$media--s*0.85) { @content; }
-    }
-
-    @if $media-query == xs {
-        @media only screen and (max-width:$media--xs) { @content; }
+    @if $media-query == min-xs {
+        @media only screen and (min-width:$media--xs) { @content; }
     }
 
     @if $media-query == v-m {
@@ -115,6 +105,16 @@
     @if $media-query == v-xxs {
         @media only screen and (max-height:$landscape1-height),
                only screen and (max-height: $landscape2-height) and (min-width: $landscape2-width) { @content; }
+    }
+
+    @if $media-query == min-s--v-s or $media-query == teapot {
+        // short and stout like a little teapot
+        @media only screen and (min-width:$teapot-width) and (max-height:($teapot-height)) { @content; }
+    }
+
+    @if $media-query == reverse-teapot or $media-query == breadbox {
+        // bigger than a breadbox?
+        @media only screen and (min-width:$breadbox-width) and (min-height:$breadbox-height) { @content; }
     }
 
     @if $media-query == home_logo {
