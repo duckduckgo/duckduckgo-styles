@@ -7,13 +7,13 @@
 */
 
 $popout-bg: $white;
-$popout-border: $platinum;
-$popout-notch-border: $button-border;
+$popout-header-bg: $silver-light;
+$popout-border: $platinum-dark;
 $popout-border-width: 1px;
 $popout-shadow: 0 0 5px -2px rgba(0,0,0,0.25);
 
-$popout-arrow-size: 7px;
-$popout-spacing: $popout-arrow-size*2;
+$popout-arrow-size: 10px;
+$popout-spacing: 12px;
 $popout-spacing-v: 6px;
 $popout-spacing-bottom-side: 22px;
 
@@ -139,7 +139,7 @@ $popout-width-lg: 230px;
         border-bottom-width: 0;
     }
     &:before {
-        border-top-color: $popout-notch-border;
+        border-top-color: $popout-border;
     }
     &:after {
         border-top-color: $popout-bg;
@@ -161,7 +161,7 @@ $popout-width-lg: 230px;
         border-right-width: 0;
     }
     &:before {
-        border-left-color: $popout-notch-border;
+        border-left-color: $popout-border;
     }
     &:after {
         border-left-color: $popout-bg;
@@ -183,7 +183,7 @@ $popout-width-lg: 230px;
         border-left-width: 0;
     }
     &:before {
-        border-right-color: $popout-notch-border;
+        border-right-color: $popout-border;
     }
     &:after {
         border-right-color: $popout-bg;
@@ -207,11 +207,14 @@ $popout-width-lg: 230px;
         border-top-width: 0;
     }
     &:before {
-        border-bottom-color: $popout-notch-border;
+        border-bottom-color: $popout-border;
     }
     &:after {
         border-bottom-color: $popout-bg;
         margin-top: $popout-border-width;
+    }
+    &.has-header:after {
+        border-bottom-color: $popout-header-bg;
     }
 }
 
@@ -248,6 +251,15 @@ $popout-width-lg: 230px;
 }
 
 // standard internal elements
+    .popout__header {
+        background: $popout-header-bg;
+        padding: $base-unit;
+        border-bottom: 1px solid $popout-border;
+    }
+        .popout__header__title {
+            font-weight: 600;
+        }
+
     .popout__body {
         padding: $base-unit;
         position: relative;
