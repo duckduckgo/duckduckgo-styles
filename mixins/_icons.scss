@@ -33,10 +33,10 @@
         content: "\2192";
     }
     @if $symbol == 'arrow-top' {
-        content: "\2191";
+        content: "\2b06";
     }
     @if $symbol == 'arrow-up' {
-        content: "\2b06";
+        content: "\2191";
     }
     @if $symbol == 'check' {
         content: "\2713";
