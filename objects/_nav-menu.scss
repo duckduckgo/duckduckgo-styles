@@ -179,22 +179,6 @@ $dark-nav-bg: #313235;
                 bottom: -6px;
             }
 /*
-    Only want to show Region in side menu
-    on s + xs screen sizes (the sizes where the screen
-    is too narrow for it to fit on the SERP)
- */
-
-.nav-menu--region {
-    display: none;
-}
-
-@include media-query(s) {
-    .nav-menu--region {
-        display: block;
-    }
-}
-
-/*
     Layout Options
 */
     
