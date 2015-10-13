@@ -23,8 +23,20 @@
     @if $symbol == 'alert' {
         content: "\21";
     }
+    @if $symbol == 'arrow-down' {
+        content: "\2193";
+    }
+    @if $symbol == 'arrow-left' {
+        content: "\2190";
+    }
+    @if $symbol == 'arrow-right' {
+        content: "\2192";
+    }
     @if $symbol == 'arrow-top' {
         content: "\2b06";
+    }
+    @if $symbol == 'arrow-up' {
+        content: "\2191";
     }
     @if $symbol == 'check' {
         content: "\2713";

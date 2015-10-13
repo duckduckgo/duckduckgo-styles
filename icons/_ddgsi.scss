@@ -4,11 +4,11 @@
 
 @font-face {
 	font-family: 'ddg-serp-icons';
-	src:url('font/ddg-serp-icons.eot?v=117');
-	src:url('font/ddg-serp-icons.eot?v=117#iefix') format('embedded-opentype'),
-	url('font/ddg-serp-icons.svg?v=117#ddg-serp-icons') format('svg'),
-	url('font/ddg-serp-icons.woff?v=117') format('woff'),
-	url('font/ddg-serp-icons.ttf?v=117') format('truetype');
+	src:url('font/ddg-serp-icons.eot?v=118');
+	src:url('font/ddg-serp-icons.eot?v=118#iefix') format('embedded-opentype'),
+	url('font/ddg-serp-icons.svg?v=118#ddg-serp-icons') format('svg'),
+	url('font/ddg-serp-icons.woff?v=118') format('woff'),
+	url('font/ddg-serp-icons.ttf?v=118') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,8 +23,20 @@
 .ddgsi-alert:before {
 	@include icon('alert','1');
 }
+.ddgsi-arrow-down:before {
+	@include icon('arrow-down','1');
+}
+.ddgsi-arrow-left:before {
+	@include icon('arrow-left','1');
+}
+.ddgsi-arrow-right:before {
+	@include icon('arrow-right','1');
+}
 .ddgsi-arrow-top:before {
 	@include icon('arrow-top','1');
+}
+.ddgsi-arrow-up:before {
+	@include icon('arrow-up','1');
 }
 .ddgsi-check:before {
 	@include icon('check','1');
