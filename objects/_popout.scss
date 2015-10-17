@@ -272,14 +272,24 @@ $popout-width-lg: 230px;
             color: $slate-light;
             text-decoration: none;
 
+            &:visited,
+            &:focus {
+                color: $slate-light;
+            }
+
             &:active,
             &:hover {
-                color: $slate;
+                color: $slate-light;
                 background-color: $popout-header-bg;
                 text-decoration: none;
             }
 
             &.is-selected {
                 color: $red;
+            }
+
+            &.is-disabled {
+                color: $gray-light;
+                background-color: inherit;
             }
         }
