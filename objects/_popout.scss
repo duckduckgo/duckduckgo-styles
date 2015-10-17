@@ -10,6 +10,7 @@ $popout-bg: $white;
 $popout-header-bg: $silver-light;
 $popout-border: $platinum;
 $popout-border-width: 1px;
+$popout-border-radius: 2px;
 
 $popout-arrow-size: 10px;
 $popout-spacing: 12px;
@@ -56,7 +57,7 @@ $popout-width-lg: 230px;
 .popout {
     @include transition(opacity 0.15s ease-out false, transform 0.15s ease-out false);
     @include transform(scale(0.85));
-    @include border-radius(2px);
+    @include border-radius($popout-border-radius);
     @include box-shadow(0 0 0.2px 1px rgba(0, 0, 0, 0.1));
     @include rem(font-size, 1rem);
     
@@ -253,6 +254,15 @@ $popout-width-lg: 230px;
         background: $popout-header-bg;
         padding: $base-unit;
         border-bottom: 1px solid $popout-border;
+
+        .popout--bottom & {
+            border-top-right-radius: $popout-border-radius;
+            border-top-left-radius: $popout-border-radius;
+        }
+        .popout--top & {
+            border-bottom-right-radius: $popout-border-radius;
+            border-bottom-left-radius: $popout-border-radius;
+        }
     }
         .popout__header__title {
             font-weight: 600;
