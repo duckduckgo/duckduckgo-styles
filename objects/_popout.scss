@@ -265,3 +265,19 @@ $popout-width-lg: 230px;
         position: relative;
         display: block;
     }
+        .popout__list-link {
+            display: block;
+            color: $slate-light;
+            text-decoration: none;
+
+            &:active,
+            &:hover {
+                color: $slate;
+                background-color: $silver-dark;
+                text-decoration: none;
+            }
+
+            &.is-selected {
+                color: $red;
+            }
+        }
