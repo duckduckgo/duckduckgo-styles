@@ -286,6 +286,12 @@ $popout-width-lg: 230px;
 
             &.is-selected {
                 color: $red;
+
+                &:hover,
+                &:active {
+                    color: $red;
+                    background-color: transparent;
+                }
             }
 
             &.is-disabled {
