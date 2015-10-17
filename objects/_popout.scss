@@ -8,13 +8,12 @@
 
 $popout-bg: $white;
 $popout-header-bg: $silver-light;
-$popout-border: $platinum-dark;
+$popout-border: $platinum;
 $popout-border-width: 1px;
-$popout-shadow: 0 0 5px -2px rgba(0,0,0,0.25);
 
 $popout-arrow-size: 10px;
 $popout-spacing: 12px;
-$popout-spacing-v: 6px;
+$popout-spacing-v: 8px;
 $popout-spacing-bottom-side: 22px;
 
 $popout-width: 200px;
@@ -58,10 +57,9 @@ $popout-width-lg: 230px;
     @include transition(opacity 0.15s ease-out false, transform 0.15s ease-out false);
     @include transform(scale(0.85));
     @include border-radius(2px);
-    @include box-shadow($popout-shadow);
+    @include box-shadow(0 0 0.2px 1px rgba(0, 0, 0, 0.1));
     @include rem(font-size, 1rem);
     
-    border: 1px solid $popout-border;
     background-color: $popout-bg;
     color: $dark;
     
@@ -265,6 +263,10 @@ $popout-width-lg: 230px;
         position: relative;
         display: block;
     }
+        .popout__list {
+            padding: 0;
+        }
+
         .popout__list-link {
             display: block;
             color: $slate-light;
@@ -273,7 +275,7 @@ $popout-width-lg: 230px;
             &:active,
             &:hover {
                 color: $slate;
-                background-color: $silver-dark;
+                background-color: $popout-header-bg;
                 text-decoration: none;
             }
 
