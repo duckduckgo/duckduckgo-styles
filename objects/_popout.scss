@@ -92,6 +92,7 @@ $popout-width-lg: 230px;
         width: 0;
     }
     
+    .popout-wrap.is-showing &,
     &.is-showing {
         @include transform(scale(1));
         visibility: visible;
