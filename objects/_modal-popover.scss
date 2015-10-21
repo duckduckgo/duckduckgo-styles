@@ -1,19 +1,8 @@
-/*
-    Popovers!
-    
-    Users don't normally love these, so please use careuflly.
-    
-    These are intended to be mostly javascript-free.  We'll see how that works.
-    
-    To be light on JS, we need to use some special markup like so ...
-    
-    <div id="[up-to-you]" class="popover">
-        <a href="#_" class="popover__esc"></a>
-        [your markup here]
-    </div>
-    
-    To trigger, the user would just need to click any link that targets the [up-to-you] anchor.
-*/
+//
+// Popovers!
+//
+// A screen-dominating modal variant.
+//
 
 $popover-shadow: 0 0 15px -3px rgba(0,0,0,0.35);
 
@@ -105,7 +94,6 @@ $popover-shadow: 0 0 15px -3px rgba(0,0,0,0.35);
         @include transform(scale(0.85));
         @include box-shadow($popover-shadow);
         -webkit-overflow-scrolling: touch;
-        background-color: $main-bg;
         text-align: center;
         display: table;
         pointer-events: auto;
