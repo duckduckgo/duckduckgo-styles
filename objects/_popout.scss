@@ -13,9 +13,14 @@ $popout-border-width: 1px;
 $popout-border-radius: 2px;
 
 $popout-arrow-size: 10px;
+$popout-arrow-font-size: 24px;
+$popout-arrow-h-fix: $popout-arrow-font-size / -2;
+$popout-arrow-position: $popout-arrow-size - $popout-arrow-font-size - 3;
+$popout-arrow-spacing: 4px;
+$popout-arrow-spacing-bottom-side: 10px;
 $popout-spacing: 12px;
 $popout-spacing-v: 8px;
-$popout-spacing-bottom-side: 22px;
+$popout-spacing-bottom-side: 23px;
 
 $popout-width: 200px;
 $popout-width-sm: 160px;
@@ -85,13 +90,22 @@ $popout-width-lg: 230px;
     
     &:before,
     &:after {
-        content: "";
-        display: block;
+        @include icon();
         position: absolute;
-        height: 0;
-        width: 0;
+        display: block;
+        line-height: $popout-arrow-font-size;
+        font-size: $popout-arrow-font-size;
+        height: $popout-arrow-font-size;
+        width: $popout-arrow-font-size;
     }
     
+    &:before {
+        color: $popout-border;
+    }
+    &:after {
+        color: $popout-bg;
+    }
+
     .popout-wrap.is-showing &,
     &.is-showing {
         @include transform(scale(1));
@@ -131,18 +145,12 @@ $popout-width-lg: 230px;
     
     &:before,
     &:after {
-        margin-left: -$popout-arrow-size;
-        bottom: -$popout-arrow-size;
+        @include icon('t-down',1);
+        bottom: $popout-arrow-position;
+        margin-left: $popout-arrow-h-fix;
         left: 50%;
-        
-        border: $popout-arrow-size solid transparent;
-        border-bottom-width: 0;
-    }
-    &:before {
-        border-top-color: $popout-border;
     }
     &:after {
-        border-top-color: $popout-bg;
         margin-bottom: $popout-border-width;
     }
 }
@@ -150,21 +158,15 @@ $popout-width-lg: 230px;
 .popout--left {
     margin-right: $popout-spacing;
     right: 100%;
-    top: -$popout-spacing*1.5;
+    top: -$popout-spacing - $popout-arrow-spacing/2;
     
     &:before,
     &:after {
-        right: -$popout-arrow-size;
-        top: $popout-spacing;
-        
-        border: $popout-arrow-size solid transparent;
-        border-right-width: 0;
-    }
-    &:before {
-        border-left-color: $popout-border;
+        @include icon('t-right',1);
+        right: $popout-arrow-position;
+        top: $popout-arrow-spacing;
     }
     &:after {
-        border-left-color: $popout-bg;
         margin-right: $popout-border-width;
     }
 }
@@ -172,21 +174,15 @@ $popout-width-lg: 230px;
 .popout--right {
     margin-left: $popout-spacing;
     left: 100%;
-    top: -$popout-spacing*1.5;
+    top: -$popout-spacing - $popout-arrow-spacing/2;
     
     &:before,
     &:after {
-        left: -$popout-arrow-size;
-        top: $popout-spacing;
-        
-        border: $popout-arrow-size solid transparent;
-        border-left-width: 0;
-    }
-    &:before {
-        border-right-color: $popout-border;
+        @include icon('t-left',1);
+        left: $popout-arrow-position;
+        top: $popout-arrow-spacing;
     }
     &:after {
-        border-right-color: $popout-bg;
         margin-left: $popout-border-width;
     }
 }
@@ -199,22 +195,16 @@ $popout-width-lg: 230px;
     
     &:before,
     &:after {
-        margin-left: -$popout-arrow-size;
-        top: -$popout-arrow-size;
+        @include icon('t-up',1);
+        top: $popout-arrow-position;
+        margin-left: $popout-arrow-h-fix;
         left: 50%;
-        
-        border: $popout-arrow-size solid transparent;
-        border-top-width: 0;
-    }
-    &:before {
-        border-bottom-color: $popout-border;
     }
     &:after {
-        border-bottom-color: $popout-bg;
         margin-top: $popout-border-width;
     }
     &.has-header:after {
-        border-bottom-color: $popout-header-bg;
+        color: $popout-header-bg;
     }
 }
 
@@ -231,12 +221,13 @@ $popout-width-lg: 230px;
 
 .popout--bottom-left {
     right: -$popout-spacing-bottom-side;
+    left: auto;
     
     &:before,
     &:after {
         left: auto;
-        right: $popout-spacing;
         margin-left: 0;
+        right: $popout-arrow-spacing-bottom-side;
     }
 }
 
@@ -245,8 +236,8 @@ $popout-width-lg: 230px;
     
     &:before,
     &:after {
+        left: $popout-arrow-spacing-bottom-side;
         margin-left: 0;
-        left: $popout-spacing;
     }
 }
 
