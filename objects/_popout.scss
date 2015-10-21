@@ -12,10 +12,10 @@ $popout-border: $platinum;
 $popout-border-width: 1px;
 $popout-border-radius: 2px;
 
-$popout-arrow-size: 9px;
+$popout-arrow-size: 10px;
 $popout-arrow-font-size: 24px;
 $popout-arrow-h-fix: $popout-arrow-font-size / -2;
-$popout-arrow-position: $popout-arrow-size - $popout-arrow-font-size;
+$popout-arrow-position: $popout-arrow-size - $popout-arrow-font-size - 3;
 $popout-arrow-spacing: 4px;
 $popout-arrow-spacing-bottom-side: 10px;
 $popout-spacing: 12px;
