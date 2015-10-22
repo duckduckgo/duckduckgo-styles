@@ -21,9 +21,16 @@ $modal-border-radius: 2px;
 }
 
 .modal {
+    pointer-events: none;
+
     // do not inherit text styles
+    text-align: center;
     font-weight: 400;
     line-height: 1.2;
+
+    &.is-showing {
+        pointer-events: auto;
+    }
 
     h1, h2, h3, h4, h5 {
         padding: 0;
@@ -53,7 +60,6 @@ $modal-border-radius: 2px;
     color: $modal-text;
 
     white-space: normal;
-    text-align: center;
 }
 
 .modal__close {
@@ -76,18 +82,19 @@ $modal-border-radius: 2px;
 }
 
 // standard internal elements
-.modal__header {
+.modal__header,
+.modal__footer {
     padding: $base-unit;
     background: $modal-header-bg;
     border-bottom: $modal-border-width solid $modal-border;
 }
 
-.modal__header--top {
+.modal__header {
     border-top-right-radius: $modal-border-radius;
     border-top-left-radius: $modal-border-radius;
 }
 
-.modal__header--bottom {
+.modal__footer {
     border-bottom-right-radius: $modal-border-radius;
     border-bottom-left-radius: $modal-border-radius;
 }

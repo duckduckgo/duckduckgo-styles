@@ -9,7 +9,6 @@ $popover-shadow: 0 0 15px -3px rgba(0,0,0,0.35);
 .modal--popover {
     // default styles
     @include transition(background 0.15s ease-out false);
-    pointer-events: none;
     display: table;
     overflow: hidden;
     visibility: hidden;
@@ -23,7 +22,6 @@ $popover-shadow: 0 0 15px -3px rgba(0,0,0,0.35);
     top: 0;
 
     &.is-showing {
-        pointer-events: auto;
         background: #ddd;
         background: rgba(white,0.7);
         visibility: visible;
