@@ -1,0 +1,93 @@
+//
+// Popovers!
+//
+// A screen-dominating modal variant.
+//
+
+$popover-shadow: 0 0 15px -3px rgba(0,0,0,0.35);
+
+.modal--popover {
+    // default styles
+    @include transition(background 0.15s ease-out false);
+    display: table;
+    overflow: hidden;
+    visibility: hidden;
+    background: rgba(white,0);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+
+    &.is-showing {
+        background: #ddd;
+        background: rgba(white,0.7);
+        visibility: visible;
+        z-index: 300;
+
+        .modal__box {
+            @include transform(scale(1));
+            opacity: 1;
+        }
+        .modal__overlay {
+            display: block;
+        }
+    }
+
+    .modal__wrap,
+    .modal__box {
+        z-index: 5;
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+    }
+    .modal__wrap {
+        pointer-events: none;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .modal__box {
+        @include transition(opacity 0.15s ease-out false, transform 0.15s ease-out false);
+        @include transform(scale(0.85));
+        @include box-shadow($popover-shadow);
+        -webkit-overflow-scrolling: touch;
+        pointer-events: auto;
+        display: table;
+        opacity: 0;
+    }
+    .modal__body {
+        max-height: 100%;
+        overflow: auto;
+        height: 100%;
+    }
+}
+// lots of content, scrolls on smaller screens
+// in this use case, .modal__box will require
+// a fixed height, or max-height in px.
+.modal--popover--scroll {
+    display: block;
+
+    .modal__wrap,
+    .modal__box {
+        @include absolute-center();
+        display: block;
+    }
+}
+.modal--popover--notransition {
+    @include single-transition(none);
+
+    .modal__box {
+        @include single-transition(none);
+        @include transform(none);
+        opacity: 1;
+    }
+}
+.modal--popover--dk {
+    &.is-showing {
+        background: rgba(210,210,210,0.6);
+    }
+}
+
