@@ -23,21 +23,11 @@ $popout-width: 200px;
 $popout-width-sm: 160px;
 $popout-width-lg: 230px;
 
-.modal--popout--top,
-.modal--popout--bottom,
-.modal--popout--bottom-left,
-.modal--popout--bottom-right {
-    height: 100%;
-}
-
-.modal--popout--left,
-.modal--popout--right {
-    width: 100%;
-}
-
 .modal--popout {
     @include absolute-center();
     display: block;
+    height: 0;
+    width: 0;
 
     // main styling element
     .modal__box {
@@ -84,6 +74,18 @@ $popout-width-lg: 230px;
         z-index: 250;
         opacity: 1;
     }
+}
+
+.modal--popout--top,
+.modal--popout--bottom,
+.modal--popout--bottom-left,
+.modal--popout--bottom-right {
+    height: 100%;
+}
+
+.modal--popout--left,
+.modal--popout--right {
+    width: 100%;
 }
 
 .modal__box {
