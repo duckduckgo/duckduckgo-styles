@@ -174,7 +174,12 @@ $popout-width-lg: 230px;
         &:after {
             margin-top: $popout-border-width;
         }
-        &.has-header:after {
+    }
+
+    .modal--popout--bottom.has-header &,
+    .modal--popout--bottom-right.has-header &,
+    .modal--popout--bottom-left.has-header & {
+        &:after {
             color: $modal-header-bg;
         }
     }
