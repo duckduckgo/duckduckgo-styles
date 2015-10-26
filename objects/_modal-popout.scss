@@ -20,7 +20,7 @@ $popout-spacing-v: 8px;
 $popout-spacing-bottom-side: 23px;
 
 $popout-width: 200px;
-$popout-width-sm: 160px;
+$popout-width-sm: $modal-min-width;
 $popout-width-lg: 230px;
 
 .modal--popout {

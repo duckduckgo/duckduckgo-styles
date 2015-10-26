@@ -12,6 +12,8 @@ $modal-border: $platinum;
 $modal-border-width: 1px;
 $modal-border-radius: 2px;
 
+$modal-min-width: 160px;
+
 // minimum required styles on any potential container
 // for a relatively-positioned modal (e.g. popout)
 .modal-trig {
@@ -58,6 +60,7 @@ $modal-border-radius: 2px;
 
     background-color: $modal-bg;
     color: $modal-text;
+    min-width: $modal-min-width;
 
     white-space: normal;
 }
