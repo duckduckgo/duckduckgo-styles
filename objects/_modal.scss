@@ -120,6 +120,7 @@ $modal-min-width: 160px;
         display: block;
         color: $slate-light;
         text-decoration: none;
+        cursor: pointer;
 
         &:visited,
         &:focus {
@@ -127,7 +128,8 @@ $modal-min-width: 160px;
         }
 
         &:active,
-        &:hover {
+        &:hover,
+        &.is-highlighted {
             color: $slate-light;
             background-color: $modal-header-bg;
             text-decoration: none;
