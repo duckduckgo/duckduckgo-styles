@@ -13,6 +13,7 @@ $switch-knob-size: $switch-height - ($switch-inner-padding * 2);
     height: $switch-height;
     width: $switch-width;
     background: $grey-light;
+    cursor: pointer;
     &.is-on {
         background: $blue;
     }
