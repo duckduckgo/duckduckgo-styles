@@ -2,38 +2,32 @@
     On/Off Switch
 */
 
+$switch-height: 16px;
+$switch-width: 26px;
+$switch-inner-padding: 2px;
+$switch-knob-size: $switch-height - $switch-inner-padding;
+
 .switch {
     @include border-radius(10px);
     position: relative;
-    height: 20px;
-    width: 46px;
+    height: $switch-height;
+    width: $switch-width;
     background: $grey-light;
     .is-on & {
         background: $blue;
     }
 }
     .switch__knob {
-        @include border-radius(9px);
+        @include border-radius($switch-height / 2);
         @include single-transition(0.1s linear left);
         position: absolute;
         display: block;
-        left: 2px;
-        top: 2px;
-        height: 16px;
-        width: 16px;
+        left: $switch-inner-padding;
+        top: $switch-inner-padding;
+        height: $switch-knob-size;
+        width: $switch-knob-size;
         background-color: $white;
         .is-on & {
-            left: 28px;
-        }
-    }
-    .switch__on {
-        position: absolute;
-        color: $white;
-        line-height: 20px;
-        left: 10px;
-        display: none;
-        font-size: 14px;
-        .is-on & {
-            display: block;
+            left: $switch-width - $switch-knob-size - $switch-inner-padding;
         }
     }
