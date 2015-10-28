@@ -129,6 +129,8 @@ $modal-min-width: 160px;
 
         &:active,
         &:hover,
+        &.is-highlighted:active,
+        &.is-highlighted:hover,
         &.is-highlighted {
             color: $slate-light;
             background-color: $modal-header-bg;
