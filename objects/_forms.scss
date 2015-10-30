@@ -49,7 +49,7 @@ $form-text-color: $dark;
         padding-left: $small-unit;
         // on mobile devices the top/bottom padding are different:
         padding-top: 0;
-        padding-left: 0;
+        padding-bottom: 0;
         // disable inner shadows on webkit mobile devices:
         -webkit-appearance: caret;
     }
