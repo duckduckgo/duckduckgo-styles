@@ -47,6 +47,8 @@ $form-text-color: $dark;
         height: 2em;
         line-height: 2em;
         padding-left: $small-unit;
+        // disable inner shadows on webkit mobile devices:
+        -webkit-appearance: caret;
     }
         .frm__input--clearable {
             position: relative;
