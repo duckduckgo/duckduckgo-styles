@@ -51,7 +51,7 @@ $form-text-color: $dark;
         padding-top: 0;
         padding-bottom: 0;
         // disable inner shadows on webkit mobile devices:
-        -webkit-appearance: caret;
+        -webkit-appearance: none;
     }
         .frm__input--clearable {
             position: relative;
