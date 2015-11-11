@@ -139,7 +139,132 @@ $form-text-color: $dark;
             top: 50%;
         }
     }
-    
+
+    .frm__select--noborder {
+        @include border-radius();
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+
+        line-height: 2.2;
+        height: 2.3em;
+        border: none;
+        background-color: inherit;
+        /* background-color: $button-bg; */
+        color: $button-color;
+
+        padding: 0;
+        vertical-align: middle;
+        margin-bottom: 0;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white;
+        }
+
+        select {
+            @include experimental(appearance, none);
+            background: none;
+            cursor: pointer;
+
+            margin: 0;
+            position: relative;
+            display: block;
+
+            font-size: 1em;
+            line-height: inherit;
+
+            // yucky hacks to override browser junk
+            min-width: 10em;
+            width: 140% !important;
+            height: 2.2em !important;
+            outline: none !important;
+            border: none !important;
+
+            .lt-ie9 & {
+                padding-bottom: 0.4em;
+            }
+        }
+
+
+        &:after {
+            @include icon('down');
+
+            margin-top: -5px;
+            font-size: 12px;
+            line-height: 1;
+
+            pointer-events: none;
+            vertical-align: middle;
+            display: inline-block;
+
+            position: absolute;
+            right: 65px;
+            top: 50%;
+        }
+    }
+    .frm__select--maps {
+        @include border-radius();
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+
+        line-height: 2.2;
+        height: 2.3em;
+        border: none;
+        background-color: inherit;
+        /* background-color: $button-bg; */
+        color: $button-color;
+
+        padding: 0;
+        vertical-align: middle;
+        margin-bottom: 0;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white;
+        }
+
+        select {
+            @include experimental(appearance, none);
+            background: none;
+            cursor: pointer;
+
+            margin: 0;
+            position: relative;
+            display: block;
+
+            font-size: 1em;
+            line-height: inherit;
+
+            // yucky hacks to override browser junk
+            min-width: 4.6em;
+            width: 140% !important;
+            height: 2.2em !important;
+            outline: none !important;
+            border: none !important;
+
+            .lt-ie9 & {
+                padding-bottom: 0.4em;
+            }
+        }
+
+        &:after {
+            @include icon('down');
+
+            margin-top: -5px;
+            font-size: 12px;
+            line-height: 1;
+
+            pointer-events: none;
+            vertical-align: middle;
+            display: inline-block;
+
+            position: absolute;
+            right: 0.5px;
+            top: 50%;
+        }
+    }    
     .frm__select--no-first {
         // on FF and Chrome this hides the first selection
         select option:first-child {
