@@ -6,11 +6,11 @@
 
 @font-face {
 	font-family: 'ddg-serp-icons';
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=118');
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=118#iefix') format('embedded-opentype'),
-	url($asset-path + '/font/ddg-serp-icons.svg?v=118#ddg-serp-icons') format('svg'),
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=119');
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=119#iefix') format('embedded-opentype'),
+	url($asset-path + '/font/ddg-serp-icons.svg?v=119#ddg-serp-icons') format('svg'),
 	url($ddg-serp-icons-woff-base64) format('woff'),
-	url($asset-path + '/font/ddg-serp-icons.ttf?v=118') format('truetype');
+	url($asset-path + '/font/ddg-serp-icons.ttf?v=119') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -78,6 +78,9 @@
 }
 .ddgsi-football:before {
 	@include icon('football','1');
+}
+.ddgsi-frown:before {
+	@include icon('frown','1');
 }
 .ddgsi-grid:before {
 	@include icon('grid','1');
@@ -156,6 +159,9 @@
 }
 .ddgsi-right-sign:before {
 	@include icon('right-sign','1');
+}
+.ddgsi-smile:before {
+	@include icon('smile','1');
 }
 .ddgsi-star:before {
 	@include icon('star','1');
