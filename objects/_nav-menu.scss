@@ -188,7 +188,7 @@ $dark-nav-bg: #313235;
     display: none;
 }
 
-@include media-query(s) {
+@include media-query(m) {
     .nav-menu--region {
         display: block;
     }
