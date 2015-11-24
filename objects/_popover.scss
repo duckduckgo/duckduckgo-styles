@@ -19,7 +19,7 @@ $popover-shadow: 0 0 15px -3px rgba(0,0,0,0.35);
 
 .popover {
     // default styles
-    @include transition(background 0.15s ease-out);
+    @include transition(background 0.15s ease-out, visibility 0 ease-out 0.15s);
     pointer-events: none;
     display: table;
     overflow: hidden;
@@ -119,6 +119,7 @@ $popover-shadow: 0 0 15px -3px rgba(0,0,0,0.35);
         .popover.is-showing & {
             @include transform(scale(1));
             opacity: 1;
+            @include transition-delay(0s);
         }
     }
     
