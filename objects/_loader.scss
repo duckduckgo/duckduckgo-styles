@@ -4,9 +4,6 @@ Loader animation
 
 */
 
-
-$loader-color-list: 'black' 'white';
-
 .loader {
     @include animation(loader-animate 0.5s steps(15) infinite);
     width: 32px;
@@ -21,15 +18,5 @@ $loader-color-list: 'black' 'white';
     }
     100% {
         background-position: right;
-    }
-}
-
-@for $size from 1 to 4 {
-    .x#{$size} {
-        @each $color in $loader-color-list {
-            &.#{$color} {
-                background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/#{$color}x#{$size}.png);
-            }
-        }
     }
 }
