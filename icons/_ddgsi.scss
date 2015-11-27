@@ -2,13 +2,15 @@
 	Please retain the !important on font-weight for .ddgsi
 */
 
+@import "_base64-icons";
+
 @font-face {
 	font-family: 'ddg-serp-icons';
-	src:url('font/ddg-serp-icons.eot?v=118');
-	src:url('font/ddg-serp-icons.eot?v=118#iefix') format('embedded-opentype'),
-	url('font/ddg-serp-icons.svg?v=118#ddg-serp-icons') format('svg'),
-	url('font/ddg-serp-icons.woff?v=118') format('woff'),
-	url('font/ddg-serp-icons.ttf?v=118') format('truetype');
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=118');
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=118#iefix') format('embedded-opentype'),
+	url($asset-path + '/font/ddg-serp-icons.svg?v=118#ddg-serp-icons') format('svg'),
+	url($ddg-serp-icons-woff-base64) format('woff'),
+	url($asset-path + '/font/ddg-serp-icons.ttf?v=118') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
