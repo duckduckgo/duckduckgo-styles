@@ -74,6 +74,10 @@ $popover-shadow: 0 0 15px -3px rgba(0,0,0,0.35);
         @include absolute-center();
         display: block;
     }
+
+    .modal__box {
+        overflow: auto;
+    }
 }
 .modal--popover--notransition {
     @include single-transition(none);
