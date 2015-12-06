@@ -1,0 +1,210 @@
+//
+// Popouts
+//
+// Relative-positioned modals, 
+// containing small content blocks.
+//
+
+$popout-bg: $modal-bg;
+$popout-border: $modal-border;
+$popout-border-width: $modal-border-width;
+
+$popout-arrow-size: 10px;
+$popout-arrow-font-size: 24px;
+$popout-arrow-h-fix: $popout-arrow-font-size / -2;
+$popout-arrow-position: $popout-arrow-size - $popout-arrow-font-size - 3;
+$popout-arrow-spacing: 4px;
+$popout-arrow-spacing-bottom-side: 10px;
+$popout-spacing: 12px;
+$popout-spacing-v: 8px;
+$popout-spacing-bottom-side: 23px;
+
+$popout-width: 200px;
+$popout-width-sm: $modal-min-width;
+$popout-width-lg: 230px;
+
+.modal--popout {
+    @include absolute-center();
+    display: block;
+    height: 0;
+    width: 0;
+
+    // main styling element
+    .modal__box {
+        @include transition(opacity 0.15s ease-out false, transform 0.15s ease-out false);
+        @include box-shadow(0 0 0.2px 1px rgba(0, 0, 0, 0.1));
+        @include transform(scale(0.85));
+        @include rem(font-size, 1rem);
+
+        width: $popout-width;
+        position: absolute;
+        display: block;
+
+        bottom: auto;
+        right: auto;
+        left: auto;
+        top: auto;
+
+        visibility: hidden;
+        opacity: 0;
+
+        &:before,
+        &:after {
+            @include icon();
+            position: absolute;
+            display: block;
+            line-height: $popout-arrow-font-size;
+            font-size: $popout-arrow-font-size;
+            height: $popout-arrow-font-size;
+            width: $popout-arrow-font-size;
+        }
+
+        &:before {
+            color: $popout-border;
+        }
+        &:after {
+            color: $popout-bg;
+        }
+
+    }
+
+    &.is-showing .modal__box {
+        @include transform(scale(1));
+        visibility: visible;
+        z-index: 250;
+        opacity: 1;
+    }
+}
+
+.modal--popout--top,
+.modal--popout--bottom,
+.modal--popout--bottom-left,
+.modal--popout--bottom-right {
+    height: 100%;
+}
+
+.modal--popout--left,
+.modal--popout--right {
+    width: 100%;
+}
+
+.modal__box {
+    // popout sizes
+    .modal--popout--sm & {
+        width: $popout-width-sm;
+    }
+    .modal--popout--lg & {
+        width: $popout-width-lg;
+    }
+
+    // popout locations
+    .modal--popout--top &,
+    .modal--popout--bottom & {
+        left: -$popout-width/2;
+    }
+
+    .modal--popout--top.modal--popout--sm &,
+    .modal--popout--bottom.modal--popout--sm & {
+        left: -$popout-width-sm/2;
+    }
+    .modal--popout--top.modal--popout--lg &,
+    .modal--popout--bottom.modal--popout--lg & {
+        left: -$popout-width-lg/2;
+    }
+
+    .modal--popout--top & {
+        margin-bottom: $popout-spacing-v;
+        bottom: 100%;
+
+        &:before,
+        &:after {
+            @include icon('t-down',1);
+            bottom: $popout-arrow-position;
+            margin-left: $popout-arrow-h-fix;
+            left: 50%;
+        }
+        &:after {
+            margin-bottom: $popout-border-width;
+        }
+    }
+
+    .modal--popout--left & {
+        margin-right: $popout-spacing;
+        right: 100%;
+        top: -$popout-spacing - $popout-arrow-spacing/2;
+
+        &:before,
+        &:after {
+            @include icon('t-right',1);
+            right: $popout-arrow-position;
+            top: $popout-arrow-spacing;
+        }
+        &:after {
+            margin-right: $popout-border-width;
+        }
+    }
+
+    .modal--popout--right & {
+        margin-left: $popout-spacing;
+        left: 100%;
+        top: -$popout-spacing - $popout-arrow-spacing/2;
+
+        &:before,
+        &:after {
+            @include icon('t-left',1);
+            left: $popout-arrow-position;
+            top: $popout-arrow-spacing;
+        }
+        &:after {
+            margin-left: $popout-border-width;
+        }
+    }
+
+    .modal--popout--bottom &,
+    .modal--popout--bottom-right &,
+    .modal--popout--bottom-left & {
+        margin-top: $popout-spacing-v;
+        top: 100%;
+
+        &:before,
+        &:after {
+            @include icon('t-up',1);
+            top: $popout-arrow-position;
+            margin-left: $popout-arrow-h-fix;
+            left: 50%;
+        }
+        &:after {
+            margin-top: $popout-border-width;
+        }
+    }
+
+    .modal--popout--bottom.has-header &,
+    .modal--popout--bottom-right.has-header &,
+    .modal--popout--bottom-left.has-header & {
+        &:after {
+            color: $modal-header-bg;
+        }
+    }
+
+    .modal--popout--bottom-left & {
+        right: -$popout-spacing-bottom-side;
+        left: auto;
+
+        &:before,
+        &:after {
+            left: auto;
+            margin-left: 0;
+            right: $popout-arrow-spacing-bottom-side;
+        }
+    }
+
+    .modal--popout--bottom-right & {
+        left: -$popout-spacing-bottom-side;
+
+        &:before,
+        &:after {
+            left: $popout-arrow-spacing-bottom-side;
+            margin-left: 0;
+        }
+    }
+}
