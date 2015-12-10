@@ -1,0 +1,153 @@
+//
+// Modal Object
+//
+// A parent object that acts as a skeleton for
+// modal variants like 'popovers' and 'popouts'
+//
+
+$modal-bg: $white;
+$modal-text: $dark;
+$modal-header-bg: $silver-light;
+$modal-border: $platinum;
+$modal-border-width: 1px;
+$modal-border-radius: 2px;
+
+$modal-min-width: 160px;
+
+// minimum required styles on any potential container
+// for a relatively-positioned modal (e.g. popout)
+.modal-trig {
+    max-height: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.modal {
+    pointer-events: none;
+
+    // do not inherit text styles
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.2;
+
+    &.is-showing {
+        pointer-events: auto;
+    }
+
+    h1, h2, h3, h4, h5 {
+        padding: 0;
+    }
+
+    p {
+        padding: $half-unit 0 0;
+    }
+}
+
+.modal__overlay {
+    @include absolute-center();
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.modal__wrap {
+
+}
+
+.modal__box {
+    @include border-radius($modal-border-radius);
+
+    background-color: $modal-bg;
+    color: $modal-text;
+    min-width: $modal-min-width;
+
+    white-space: normal;
+}
+
+.modal__close {
+    @include icon();
+    z-index: 1;
+    line-height: 1;
+    display: block;
+    text-align: center;
+    position: absolute;
+    right: $base-unit;
+    top: $base-unit;
+
+    font-size: 14px;
+    color: #8f8f8f;
+
+    &:hover {
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+// standard internal elements
+.modal__header,
+.modal__footer {
+    padding: $base-unit;
+    background: $modal-header-bg;
+    border-bottom: $modal-border-width solid $modal-border;
+}
+
+.modal__header {
+    border-top-right-radius: $modal-border-radius;
+    border-top-left-radius: $modal-border-radius;
+}
+
+.modal__footer {
+    border-bottom-right-radius: $modal-border-radius;
+    border-bottom-left-radius: $modal-border-radius;
+}
+
+    .modal__header__title {
+        font-weight: 600;
+    }
+
+.modal__body {
+    padding: $base-unit;
+    position: relative;
+    display: block;
+}
+
+.modal__list {
+    padding: 0;
+}
+
+    .modal__list__link {
+        display: block;
+        color: $slate-light;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:visited,
+        &:focus {
+            color: $slate-light;
+        }
+
+        &:active,
+        &:hover,
+        &.is-highlighted {
+            color: $slate-light;
+            background-color: $modal-header-bg;
+            text-decoration: none;
+        }
+
+        &.is-selected {
+            color: $red;
+
+            &:hover,
+            &:active {
+                color: $red;
+                background-color: transparent;
+            }
+        }
+
+        &.is-disabled {
+            color: $gray-light;
+            background-color: inherit;
+        }
+    }
+
