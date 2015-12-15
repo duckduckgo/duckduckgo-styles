@@ -1,0 +1,27 @@
+/*
+
+Loader animation
+
+*/
+
+.loader {
+    display: none;
+    width: 32px;
+    height: 32px;
+    background-size: 1600%;
+    background-repeat: no-repeat;
+
+    .is-loading & {
+        display: block;
+        @include animation(loader-animate 0.5s steps(15) infinite);
+    }
+}
+
+@include keyframes(loader-animate) {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
