@@ -65,6 +65,9 @@
     @if $symbol == 'cry' {
         content: "\2639";
     }
+    @if $symbol == 'directions' {
+        content: "\64";
+    }
     @if $symbol == 'down' {
         content: "\76";
     }

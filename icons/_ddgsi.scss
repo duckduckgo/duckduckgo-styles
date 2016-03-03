@@ -6,11 +6,11 @@
 
 @font-face {
 	font-family: 'ddg-serp-icons';
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=119');
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=119#iefix') format('embedded-opentype'),
-	url($asset-path + '/font/ddg-serp-icons.svg?v=119#ddg-serp-icons') format('svg'),
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=120');
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=120#iefix') format('embedded-opentype'),
+	url($asset-path + '/font/ddg-serp-icons.svg?v=120#ddg-serp-icons') format('svg'),
 	url($ddg-serp-icons-woff-base64) format('woff'),
-	url($asset-path + '/font/ddg-serp-icons.ttf?v=119') format('truetype');
+	url($asset-path + '/font/ddg-serp-icons.ttf?v=120') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -66,6 +66,9 @@
 }
 .ddgsi-cry:before {
 	@include icon('cry','1');
+}
+.ddgsi-directions:before {
+	@include icon('directions','1');
 }
 .ddgsi-down:before {
 	@include icon('down','1');
