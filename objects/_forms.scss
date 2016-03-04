@@ -44,10 +44,15 @@ $form-text-color: $dark;
         }
     
     .frm__input {
+        @include border-radius();
         height: 2em;
         line-height: 2em;
         padding-left: $small-unit;
-        @include border-radius();
+        // on mobile devices the top/bottom padding are different:
+        padding-top: 0;
+        padding-bottom: 0;
+        // disable inner shadows on webkit mobile devices:
+        -webkit-appearance: none;
     }
         .frm__input--clearable {
             position: relative;

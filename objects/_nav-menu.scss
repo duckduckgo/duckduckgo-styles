@@ -72,7 +72,7 @@ $dark-nav-bg: #313235;
     margin: 0;
     li {
         position: relative;
-        top: -0.65em;
+        top: -0.45em;
     }
 }
     
@@ -133,6 +133,23 @@ $dark-nav-bg: #313235;
         padding-top: 2.05em;
         margin-bottom: -0.75em;
     }
+    // add more breathing room above/below a list item
+    // when there's an icon:
+    .nav-menu__item--icon {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+        .nav-menu__item__icon {
+            // add space to the right of the icon
+            // before the text:
+            margin-right: 5px;
+        }
     .nav-menu__themes {
         height: 17px;
         padding: 12px 0 12px !important;
@@ -178,21 +195,7 @@ $dark-nav-bg: #313235;
                 right: -6px;
                 bottom: -6px;
             }
-/*
-    Only want to show Region in side menu
-    on s + xs screen sizes (the sizes where the screen
-    is too narrow for it to fit on the SERP)
- */
 
-.nav-menu--region {
-    display: none;
-}
-
-@include media-query(m) {
-    .nav-menu--region {
-        display: block;
-    }
-}
 
 /*
     Layout Options
