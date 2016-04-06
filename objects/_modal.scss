@@ -136,11 +136,19 @@ $modal-min-width: 160px;
         }
 
         &.is-selected {
-            color: $red;
+            font-weight: 600;
+
+            &:before {
+                @include icon();
+                @include icon('check', '1');
+                position: relative;
+                float: right;
+                margin-left: $base-unit;
+            }
 
             &:hover,
             &:active {
-                color: $red;
+                font-weight: 600;
                 background-color: transparent;
             }
         }
