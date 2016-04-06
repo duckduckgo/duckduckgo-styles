@@ -144,6 +144,9 @@ $modal-min-width: 160px;
                 position: relative;
                 float: right;
                 margin-left: $base-unit;
+                // having a hard time getting the checkmark to line up with the text,
+                // for whatever reason this seems to fix it:
+                top: -1px;
             }
 
             &:hover,
