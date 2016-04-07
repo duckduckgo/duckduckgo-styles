@@ -136,12 +136,22 @@ $modal-min-width: 160px;
         }
 
         &.is-selected {
-            color: $red;
+            font-weight: 600;
+
+            &:before {
+                @include icon();
+                @include icon('check', '1');
+                position: relative;
+                float: right;
+                margin-left: $base-unit;
+                // having a hard time getting the checkmark to line up with the text,
+                // for whatever reason this seems to fix it:
+                top: -1px;
+            }
 
             &:hover,
             &:active {
-                color: $red;
-                background-color: transparent;
+                font-weight: 600;
             }
         }
 
