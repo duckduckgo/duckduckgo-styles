@@ -152,6 +152,9 @@
     @if $symbol == 'region' {
         content: "\2637";
     }
+    @if $symbol == 'report' {
+        content: "\72";
+    }
     @if $symbol == 'right' {
         content: "\3e";
     }
