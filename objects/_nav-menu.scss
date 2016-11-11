@@ -230,7 +230,8 @@ $dark-nav-bg: #313235;
     .nav-menu__list {
         padding-left: $base-unit * 1.5;
         position: absolute;
-        overflow: hidden;
+        overflow: auto;
+        overflow-x: hidden;
         bottom: 0;
         right: 0;
         left: 0;
