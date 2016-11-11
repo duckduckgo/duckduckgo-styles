@@ -236,14 +236,6 @@ $dark-nav-bg: #313235;
         right: 0;
         left: 0;
         top: 0;
-        
-        // extra bottom padding so that short screen people can scroll to the bottom
-        &:after {
-            content: "";
-            clear: both;
-            display: block;
-            height: 15em;
-        }
     }
     
     &.is-open {
