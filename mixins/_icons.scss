@@ -182,6 +182,9 @@
     @if $symbol == 't-up' {
         content: "\25b2";
     }
+    @if $symbol == 'twitter' {
+        content: "\74";
+    }
     @if $symbol == 'up' {
         content: "\5e";
     }
