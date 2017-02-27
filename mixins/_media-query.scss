@@ -118,8 +118,7 @@
     }
 
     @if $media-query == home_logo {
-        @media only screen and (max-height: $media--xs * 0.9) and (max-width: $media--s),
-               only screen and (max-height: ($media--xs * 0.85)) {
+        @media only screen and (max-height: $media--xs) {
            @content;
         }
     }
