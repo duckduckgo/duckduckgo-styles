@@ -247,10 +247,4 @@ $dark-nav-bg: #313235;
     .csstransforms3d & {
         right: 0;
     }
-    
-    // animation/positioning fixes for very specific instance
-    // mobile touch devices that can re-orient with searchform focus and mess up positioning
-    .is-mobile-device & {
-        position: absolute;
-    }
 }
