@@ -247,4 +247,10 @@ $dark-nav-bg: #313235;
     .csstransforms3d & {
         right: 0;
     }
+
+	// this is required for legacy android versions, as the pop-out side menu
+	// overlaps the serp without it.
+	.is-legacy-android & {
+		position: absolute;
+	}
 }
