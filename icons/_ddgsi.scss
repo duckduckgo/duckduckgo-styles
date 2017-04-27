@@ -6,11 +6,11 @@
 
 @font-face {
 	font-family: 'ddg-serp-icons';
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=123');
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=123#iefix') format('embedded-opentype'),
-	url($asset-path + '/font/ddg-serp-icons.svg?v=123#ddg-serp-icons') format('svg'),
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=124');
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=124#iefix') format('embedded-opentype'),
+	url($asset-path + '/font/ddg-serp-icons.svg?v=124#ddg-serp-icons') format('svg'),
 	url($ddg-serp-icons-woff-base64) format('woff'),
-	url($asset-path + '/font/ddg-serp-icons.ttf?v=123') format('truetype');
+	url($asset-path + '/font/ddg-serp-icons.ttf?v=124') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -61,6 +61,9 @@
 .ddgsi-cloudsave:before {
 	@include icon('cloudsave','1');
 }
+.ddgsi-collapse:before {
+	@include icon('collapse','1');
+}
 .ddgsi-comment:before {
 	@include icon('comment','1');
 }
@@ -75,6 +78,9 @@
 }
 .ddgsi-download:before {
 	@include icon('download','1');
+}
+.ddgsi-expand:before {
+	@include icon('expand','1');
 }
 .ddgsi-eye:before {
 	@include icon('eye','1');
