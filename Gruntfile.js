@@ -46,7 +46,7 @@ module.exports = function(grunt) {
                     },{
                         template: "icons/src/templates/_ddgsi.scss",
                         dest: "icons/_ddgsi.scss",
-                        context: { version: 124 }
+                        context: { version: Math.random() }
                     }]
                 }
             }
