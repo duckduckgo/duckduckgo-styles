@@ -20,6 +20,7 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+
     @if $symbol == 'alert' {
         content: "\21";
     }
@@ -38,11 +39,11 @@
     @if $symbol == 'arrow-up' {
         content: "\2191";
     }
-    @if $symbol == 'check' {
-        content: "\2713";
-    }
     @if $symbol == 'check-sign' {
         content: "\2611";
+    }
+    @if $symbol == 'check' {
+        content: "\2713";
     }
     @if $symbol == 'circle' {
         content: "\25cf";
@@ -50,17 +51,20 @@
     @if $symbol == 'clock' {
         content: "\43";
     }
-    @if $symbol == 'close' {
-        content: "\58";
-    }
     @if $symbol == 'close-bold' {
         content: "\d7";
+    }
+    @if $symbol == 'close' {
+        content: "\58";
     }
     @if $symbol == 'cloudsave' {
         content: "\63";
     }
+    @if $symbol == 'collapse' {
+        content: "\f101";
+    }
     @if $symbol == 'comment' {
-        content: "\4F";
+        content: "\4f";
     }
     @if $symbol == 'cry' {
         content: "\2639";
@@ -74,11 +78,14 @@
     @if $symbol == 'download' {
         content: "\2913";
     }
+    @if $symbol == 'expand' {
+        content: "\f102";
+    }
     @if $symbol == 'eye' {
         content: "\69";
     }
     @if $symbol == 'football' {
-        content: "\1f3c8";
+        content: "\1f3c";
     }
     @if $symbol == 'frown' {
         content: "\28";
@@ -95,17 +102,20 @@
     @if $symbol == 'info' {
         content: "\49";
     }
-    @if $symbol == 'left' {
-        content: "\3c";
-    }
     @if $symbol == 'left-big' {
         content: "\2039";
     }
     @if $symbol == 'left-sign' {
         content: "\25c1";
     }
+    @if $symbol == 'left' {
+        content: "\3c";
+    }
     @if $symbol == 'less-sign' {
         content: "\229d";
+    }
+    @if $symbol == 'lock' {
+        content: "\f103";
     }
     @if $symbol == 'loupe' {
         content: "\53";
@@ -119,11 +129,11 @@
     @if $symbol == 'minus' {
         content: "\2d";
     }
-    @if $symbol == 'more' {
-        content: "\2026";
-    }
     @if $symbol == 'more-sign' {
         content: "\2295";
+    }
+    @if $symbol == 'more' {
+        content: "\2026";
     }
     @if $symbol == 'move' {
         content: "\2629";
@@ -131,11 +141,11 @@
     @if $symbol == 'music-note' {
         content: "\266b";
     }
-    @if $symbol == 'next' {
-        content: "\bb";
-    }
     @if $symbol == 'news' {
         content: "\6e";
+    }
+    @if $symbol == 'next' {
+        content: "\bb";
     }
     @if $symbol == 'pause' {
         content: "\2551";
@@ -152,14 +162,14 @@
     @if $symbol == 'region' {
         content: "\2637";
     }
-    @if $symbol == 'right' {
-        content: "\3e";
-    }
     @if $symbol == 'right-big' {
         content: "\203a";
     }
     @if $symbol == 'right-sign' {
         content: "\25b7";
+    }
+    @if $symbol == 'right' {
+        content: "\3e";
     }
     @if $symbol == 'smile' {
         content: "\29";
