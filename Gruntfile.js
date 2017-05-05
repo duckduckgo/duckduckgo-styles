@@ -1,5 +1,14 @@
 module.exports = function(grunt) {
 
+    var codepoints = grunt.file.readJSON("icons/src/codepoints.json");
+
+    // JSON can only store code points in string format,
+    // but grunt-webfont requires the integer value
+    // so go through and convert them
+    Object.keys(codepoints).forEach(function (key) {
+        codepoints[key] = codepoints[key].charCodeAt(0);
+    });
+
     grunt.registerMultiTask('base64', 'Base64 encode files.', function() {
         var options = this.options({});
         this.files.forEach(function(f) {
@@ -30,9 +39,7 @@ module.exports = function(grunt) {
                     destCss: "build",
                     fontFilename: "ddg-serp-icons",
                     types: "eot,woff,ttf,svg",
-                    codepoints: {
-                        loupe: 0x000053
-                    },
+                    codepoints: codepoints,
                     customOutputs: [{
                         template: "icons/src/templates/_icons.scss",
                         dest: "mixins/_icons.scss"
