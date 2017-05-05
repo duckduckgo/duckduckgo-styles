@@ -21,8 +21,20 @@ module.exports = function(grunt) {
                    'icons/_base64-icons.scss' : 'icons/font/ddg-serp-icons.woff'
                 }
             }
+        },
+        webfont: {
+            icons: {
+                src: "icons/src/svgs/*.svg",
+                dest: "build/font",
+                options: {
+                    codepoints: {
+                        loupe: 0x000053
+                    }
+                }
+            }
         }
     });
 
-    grunt.task.registerTask('default', ['base64']);
+    grunt.task.registerTask('default', ['webfont', 'base64']);
+    grunt.loadNpmTasks('grunt-webfont');
 }
