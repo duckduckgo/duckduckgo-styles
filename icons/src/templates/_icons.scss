@@ -23,6 +23,5 @@
 <% for (var i = 0; i<glyphs.length; i++) { %>
     @if $symbol == '<%= glyphs[i] %>' {
         content: "\<%= codepoints[i] %>";
-    }
-<% } %>
+    }<% } %>
 }

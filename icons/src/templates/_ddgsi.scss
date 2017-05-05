@@ -25,5 +25,4 @@
 <% for (var i = 0; i < glyphs.length; i++) { %>
 .ddgsi-<%= glyphs[i] %>:before {
 	@include icon('<%= glyphs[i] %>','1');
-}
-<% } %>
+}<% } %>
