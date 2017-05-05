@@ -1,0 +1,29 @@
+/* 
+	Please retain the !important on font-weight for .ddgsi
+*/
+
+@import "_base64-icons";
+
+@font-face {
+	font-family: 'ddg-serp-icons';
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=124');
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=124#iefix') format('embedded-opentype'),
+	url($asset-path + '/font/ddg-serp-icons.svg?v=124#ddg-serp-icons') format('svg'),
+	url($ddg-serp-icons-woff-base64) format('woff'),
+	url($asset-path + '/font/ddg-serp-icons.ttf?v=124') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+%ddgsi,
+.ddgsi,
+.ddgsi-b:before,
+.ddgsi-a:after {
+	@include icon();
+}
+
+<% for (var i = 0; i < glyphs.length; i++) { %>
+.ddgsi-<%= glyphs[i] %>:before {
+	@include icon('<%= glyphs[i] %>','1');
+}
+<% } %>

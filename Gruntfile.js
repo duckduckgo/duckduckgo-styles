@@ -33,6 +33,9 @@ module.exports = function(grunt) {
                     customOutputs: [{
                         template: "icons/src/templates/_icons.scss",
                         dest: "mixins/_icons.scss"
+                    },{
+                        template: "icons/src/templates/_ddgsi.scss",
+                        dest: "icons/_ddgsi.scss"
                     }]
                 }
             }
