@@ -61,7 +61,7 @@
         content: "\63";
     }
     @if $symbol == 'collapse' {
-        content: "\f101";
+        content: "\21f1";
     }
     @if $symbol == 'comment' {
         content: "\4f";
@@ -79,7 +79,7 @@
         content: "\2913";
     }
     @if $symbol == 'expand' {
-        content: "\f102";
+        content: "\21f2";
     }
     @if $symbol == 'eye' {
         content: "\69";
