@@ -10,6 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
     "grunt-webfont": "^1.6.0"
   }
 }

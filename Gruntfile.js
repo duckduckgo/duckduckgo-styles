@@ -49,9 +49,11 @@ module.exports = function(grunt) {
                     }]
                 }
             }
-        }
+        },
+        clean: ["icons/font"]
     });
 
-    grunt.task.registerTask('default', ['webfont', 'base64']);
+    grunt.task.registerTask('default', ['clean','webfont', 'base64']);
     grunt.loadNpmTasks('grunt-webfont');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 }
