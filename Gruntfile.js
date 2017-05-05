@@ -29,7 +29,11 @@ module.exports = function(grunt) {
                 options: {
                     codepoints: {
                         loupe: 0x000053
-                    }
+                    },
+                    customOutputs: [{
+                        template: "icons/src/templates/_icons.scss",
+                        dest: "mixins/_icons.scss"
+                    }]
                 }
             }
         }
