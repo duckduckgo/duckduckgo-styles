@@ -25,8 +25,11 @@ module.exports = function(grunt) {
         webfont: {
             icons: {
                 src: "icons/src/svgs/*.svg",
-                dest: "build/font",
                 options: {
+                    dest: "icons/font/",
+                    destCss: "build",
+                    fontFilename: "ddg-serp-icons",
+                    types: "eot,woff,ttf,svg",
                     codepoints: {
                         loupe: 0x000053
                     },
