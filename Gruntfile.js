@@ -45,7 +45,8 @@ module.exports = function(grunt) {
                         dest: "mixins/_icons.scss"
                     },{
                         template: "icons/src/templates/_ddgsi.scss",
-                        dest: "icons/_ddgsi.scss"
+                        dest: "icons/_ddgsi.scss",
+                        context: { version: 124 }
                     }]
                 }
             }
