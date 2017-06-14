@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2017-5-5: Created.
+2017-6-14: Created.
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Fri May  5 14:56:03 2017
+Created by FontForge 20120731 at Wed Jun 14 05:43:00 2017
  By Andrey Pissantchev
 
 </metadata>
@@ -19,7 +19,7 @@ Created by FontForge 20120731 at Fri May  5 14:56:03 2017
     panose-1="2 0 6 9 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
-    x-height="384.448"
+    x-height="299.872"
     cap-height="448"
     bbox="-0.015625 -64 512 448.016"
     underline-thickness="25.6"
@@ -77,7 +77,7 @@ c0.288086 0.0166016 0.591797 0.0800781 0.896484 0.12793c0.847656 0.112305 1.6953
 c0.191406 0.0800781 0.383789 0.144531 0.576172 0.208008c1.02344 0.400391 2.03125 0.848633 2.99121 1.34473c0 0 0.0166016 0 0.0166016 0.015625z" />
     <glyph glyph-name="directions" unicode="d" 
 d="M292.576 118.864v87.7754c-60.3359 0 -109.712 -45.7275 -109.712 -106.063v-91.4238h-73.1367v365.712h73.1367v-128c25.5996 23.7754 67.6475 36.5762 109.712 36.5762v91.4238l146.288 -128z" />
-    <glyph glyph-name="down" unicode="V" 
+    <glyph glyph-name="down" unicode="v" 
 d="M255.264 165.936l135.809 133.937l44.6875 -43.4082l-180.479 -172.352l-179.008 171.647l45.0078 43.5361z" />
     <glyph glyph-name="download" unicode="&#x2913;" 
 d="M416 64c17.6963 0 32 -14.3037 32 -32s-14.3037 -32 -32 -32h-320c-17.6963 0 -32 14.3037 -32 32s14.3037 32 32 32h320zM132.096 216.4v0c-9.31152 9.40723 -9.31152 24.6074 0.0966797 33.9033c9.31152 9.40819 24.4961 9.40819 33.9033 0l58.8965 -58.8955v160.592
