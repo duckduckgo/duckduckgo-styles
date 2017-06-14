@@ -1,0 +1,27 @@
+/*
+    DuckDuckGo Icons!
+    
+    Requires that you compile the icon font yourself and
+    serve it via @font-face under the name 'ddg-serp-icons'
+*/
+
+@mixin icon($symbol: '', $no_font: null) {
+    @if $no_font == null {
+        // important so settings don't override:
+        font-family: 'ddg-serp-icons' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal !important;
+        font-variant: normal;
+        text-transform: none;
+        text-decoration: none !important;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+<% for (var i = 0; i<glyphs.length; i++) { %>
+    @if $symbol == '<%= glyphs[i] %>' {
+        content: "\<%= codepoints[i] %>";
+    }<% } %>
+}

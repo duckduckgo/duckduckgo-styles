@@ -6,11 +6,11 @@
 
 @font-face {
 	font-family: 'ddg-serp-icons';
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=124');
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=124#iefix') format('embedded-opentype'),
-	url($asset-path + '/font/ddg-serp-icons.svg?v=124#ddg-serp-icons') format('svg'),
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9250390538945794');
+	src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9250390538945794#iefix') format('embedded-opentype'),
+	url($asset-path + '/font/ddg-serp-icons.svg?v=0.9250390538945794#ddg-serp-icons') format('svg'),
 	url($ddg-serp-icons-woff-base64) format('woff'),
-	url($asset-path + '/font/ddg-serp-icons.ttf?v=124') format('truetype');
+	url($asset-path + '/font/ddg-serp-icons.ttf?v=0.9250390538945794') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -21,6 +21,7 @@
 .ddgsi-a:after {
 	@include icon();
 }
+
 
 .ddgsi-alert:before {
 	@include icon('alert','1');
@@ -40,11 +41,11 @@
 .ddgsi-arrow-up:before {
 	@include icon('arrow-up','1');
 }
-.ddgsi-check:before {
-	@include icon('check','1');
-}
 .ddgsi-check-sign:before {
 	@include icon('check-sign','1');
+}
+.ddgsi-check:before {
+	@include icon('check','1');
 }
 .ddgsi-circle:before {
 	@include icon('circle','1');
@@ -52,11 +53,11 @@
 .ddgsi-clock:before {
 	@include icon('clock','1');
 }
-.ddgsi-close:before {
-	@include icon('close','1');
-}
 .ddgsi-close-bold:before {
 	@include icon('close-bold','1');
+}
+.ddgsi-close:before {
+	@include icon('close','1');
 }
 .ddgsi-cloudsave:before {
 	@include icon('cloudsave','1');
@@ -103,14 +104,14 @@
 .ddgsi-info:before {
 	@include icon('info','1');
 }
-.ddgsi-left:before {
-	@include icon('left','1');
-}
 .ddgsi-left-big:before {
 	@include icon('left-big','1');
 }
 .ddgsi-left-sign:before {
 	@include icon('left-sign','1');
+}
+.ddgsi-left:before {
+	@include icon('left','1');
 }
 .ddgsi-less-sign:before {
 	@include icon('less-sign','1');
@@ -130,20 +131,20 @@
 .ddgsi-minus:before {
 	@include icon('minus','1');
 }
-.ddgsi-more:before {
-	@include icon('more','1');
-}
 .ddgsi-more-sign:before {
 	@include icon('more-sign','1');
+}
+.ddgsi-more:before {
+	@include icon('more','1');
 }
 .ddgsi-move:before {
 	@include icon('move','1');
 }
-.ddgsi-music:before {
+.ddgsi-music-note:before {
 	@include icon('music-note','1');
 }
 .ddgsi-news:before {
-  @include icon('news','1');
+	@include icon('news','1');
 }
 .ddgsi-next:before {
 	@include icon('next','1');
@@ -163,14 +164,14 @@
 .ddgsi-region:before {
 	@include icon('region','1');
 }
-.ddgsi-right:before {
-	@include icon('right','1');
-}
 .ddgsi-right-big:before {
 	@include icon('right-big','1');
 }
 .ddgsi-right-sign:before {
 	@include icon('right-sign','1');
+}
+.ddgsi-right:before {
+	@include icon('right','1');
 }
 .ddgsi-smile:before {
 	@include icon('smile','1');
@@ -179,7 +180,7 @@
 	@include icon('star','1');
 }
 .ddgsi-swap:before {
-	@include icon('swap','1');	
+	@include icon('swap','1');
 }
 .ddgsi-t-down:before {
 	@include icon('t-down','1');
@@ -199,11 +200,11 @@
 .ddgsi-up:before {
 	@include icon('up','1');
 }
-.ddgsi-uploaded:before {
-	@include icon('uploaded','1');
-}
 .ddgsi-upload:before {
 	@include icon('upload','1');
+}
+.ddgsi-uploaded:before {
+	@include icon('uploaded','1');
 }
 .ddgsi-user:before {
 	@include icon('user','1');
