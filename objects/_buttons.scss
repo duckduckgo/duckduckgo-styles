@@ -102,7 +102,7 @@
         }
     }
     
-    // gray button, blue hover
+    // gray button
     .btn--secondary {
         border-color: $button-border;
         background-color: $silver;
@@ -111,13 +111,11 @@
         font-weight: 600;
         
         &:hover, &:focus {
-            background-color: $contrast-blue;
-            border-color: $blue;
-            color: $white;
+            background-color: $platinum-light;
         }
         &:active {
-            background-color: $blue;
-            color: $white;
+            background-color: $platinum-dark;
+            border-color: $platinum-dark;
         }
     }
     
