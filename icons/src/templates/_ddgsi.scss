@@ -1,28 +1,28 @@
 /* 
-	Please retain the !important on font-weight for .ddgsi
+    Please retain the !important on font-weight for .ddgsi
 */
 
 @import "_base64-icons";
 
 @font-face {
-	font-family: 'ddg-serp-icons';
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=<%= version %>');
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=<%= version %>#iefix') format('embedded-opentype'),
-	url($asset-path + '/font/ddg-serp-icons.svg?v=<%= version %>#ddg-serp-icons') format('svg'),
-	url($ddg-serp-icons-woff-base64) format('woff'),
-	url($asset-path + '/font/ddg-serp-icons.ttf?v=<%= version %>') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'ddg-serp-icons';
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=<%= version %>');
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=<%= version %>#iefix') format('embedded-opentype'),
+    url($asset-path + '/font/ddg-serp-icons.svg?v=<%= version %>#ddg-serp-icons') format('svg'),
+    url($ddg-serp-icons-woff-base64) format('woff'),
+    url($asset-path + '/font/ddg-serp-icons.ttf?v=<%= version %>') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 %ddgsi,
 .ddgsi,
 .ddgsi-b:before,
 .ddgsi-a:after {
-	@include icon();
+    @include icon();
 }
 
 <% for (var i = 0; i < glyphs.length; i++) { %>
 .ddgsi-<%= glyphs[i] %>:before {
-	@include icon('<%= glyphs[i] %>','1');
+    @include icon('<%= glyphs[i] %>','1');
 }<% } %>

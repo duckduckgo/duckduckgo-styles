@@ -248,9 +248,9 @@ $dark-nav-bg: #313235;
         right: 0;
     }
 
-	// this is required for legacy android versions, as the pop-out side menu
-	// overlaps the serp without it.
-	.is-legacy-android & {
-		position: absolute;
-	}
+    // this is required for legacy android versions, as the pop-out side menu
+    // overlaps the serp without it.
+    .is-legacy-android & {
+        position: absolute;
+    }
 }

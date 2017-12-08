@@ -1,214 +1,214 @@
 /* 
-	Please retain the !important on font-weight for .ddgsi
+    Please retain the !important on font-weight for .ddgsi
 */
 
 @import "_base64-icons";
 
 @font-face {
-	font-family: 'ddg-serp-icons';
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9250390538945794');
-	src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9250390538945794#iefix') format('embedded-opentype'),
-	url($asset-path + '/font/ddg-serp-icons.svg?v=0.9250390538945794#ddg-serp-icons') format('svg'),
-	url($ddg-serp-icons-woff-base64) format('woff'),
-	url($asset-path + '/font/ddg-serp-icons.ttf?v=0.9250390538945794') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'ddg-serp-icons';
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9250390538945794');
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9250390538945794#iefix') format('embedded-opentype'),
+    url($asset-path + '/font/ddg-serp-icons.svg?v=0.9250390538945794#ddg-serp-icons') format('svg'),
+    url($ddg-serp-icons-woff-base64) format('woff'),
+    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.9250390538945794') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 %ddgsi,
 .ddgsi,
 .ddgsi-b:before,
 .ddgsi-a:after {
-	@include icon();
+    @include icon();
 }
 
 
 .ddgsi-alert:before {
-	@include icon('alert','1');
+    @include icon('alert','1');
 }
 .ddgsi-arrow-down:before {
-	@include icon('arrow-down','1');
+    @include icon('arrow-down','1');
 }
 .ddgsi-arrow-left:before {
-	@include icon('arrow-left','1');
+    @include icon('arrow-left','1');
 }
 .ddgsi-arrow-right:before {
-	@include icon('arrow-right','1');
+    @include icon('arrow-right','1');
 }
 .ddgsi-arrow-top:before {
-	@include icon('arrow-top','1');
+    @include icon('arrow-top','1');
 }
 .ddgsi-arrow-up:before {
-	@include icon('arrow-up','1');
+    @include icon('arrow-up','1');
 }
 .ddgsi-check-sign:before {
-	@include icon('check-sign','1');
+    @include icon('check-sign','1');
 }
 .ddgsi-check:before {
-	@include icon('check','1');
+    @include icon('check','1');
 }
 .ddgsi-circle:before {
-	@include icon('circle','1');
+    @include icon('circle','1');
 }
 .ddgsi-clock:before {
-	@include icon('clock','1');
+    @include icon('clock','1');
 }
 .ddgsi-close-bold:before {
-	@include icon('close-bold','1');
+    @include icon('close-bold','1');
 }
 .ddgsi-close:before {
-	@include icon('close','1');
+    @include icon('close','1');
 }
 .ddgsi-cloudsave:before {
-	@include icon('cloudsave','1');
+    @include icon('cloudsave','1');
 }
 .ddgsi-collapse:before {
-	@include icon('collapse','1');
+    @include icon('collapse','1');
 }
 .ddgsi-comment:before {
-	@include icon('comment','1');
+    @include icon('comment','1');
 }
 .ddgsi-cry:before {
-	@include icon('cry','1');
+    @include icon('cry','1');
 }
 .ddgsi-directions:before {
-	@include icon('directions','1');
+    @include icon('directions','1');
 }
 .ddgsi-down:before {
-	@include icon('down','1');
+    @include icon('down','1');
 }
 .ddgsi-download:before {
-	@include icon('download','1');
+    @include icon('download','1');
 }
 .ddgsi-expand:before {
-	@include icon('expand','1');
+    @include icon('expand','1');
 }
 .ddgsi-eye:before {
-	@include icon('eye','1');
+    @include icon('eye','1');
 }
 .ddgsi-football:before {
-	@include icon('football','1');
+    @include icon('football','1');
 }
 .ddgsi-frown:before {
-	@include icon('frown','1');
+    @include icon('frown','1');
 }
 .ddgsi-grid:before {
-	@include icon('grid','1');
+    @include icon('grid','1');
 }
 .ddgsi-heart:before {
-	@include icon('heart','1');
+    @include icon('heart','1');
 }
 .ddgsi-home:before {
-	@include icon('home','1');
+    @include icon('home','1');
 }
 .ddgsi-info:before {
-	@include icon('info','1');
+    @include icon('info','1');
 }
 .ddgsi-left-big:before {
-	@include icon('left-big','1');
+    @include icon('left-big','1');
 }
 .ddgsi-left-sign:before {
-	@include icon('left-sign','1');
+    @include icon('left-sign','1');
 }
 .ddgsi-left:before {
-	@include icon('left','1');
+    @include icon('left','1');
 }
 .ddgsi-less-sign:before {
-	@include icon('less-sign','1');
+    @include icon('less-sign','1');
 }
 .ddgsi-lock:before {
-	@include icon('lock','1');
+    @include icon('lock','1');
 }
 .ddgsi-loupe:before {
-	@include icon('loupe','1');
+    @include icon('loupe','1');
 }
 .ddgsi-marker:before {
-	@include icon('marker','1');
+    @include icon('marker','1');
 }
 .ddgsi-menu:before {
-	@include icon('menu','1');
+    @include icon('menu','1');
 }
 .ddgsi-minus:before {
-	@include icon('minus','1');
+    @include icon('minus','1');
 }
 .ddgsi-more-sign:before {
-	@include icon('more-sign','1');
+    @include icon('more-sign','1');
 }
 .ddgsi-more:before {
-	@include icon('more','1');
+    @include icon('more','1');
 }
 .ddgsi-move:before {
-	@include icon('move','1');
+    @include icon('move','1');
 }
 .ddgsi-music-note:before {
-	@include icon('music-note','1');
+    @include icon('music-note','1');
 }
 .ddgsi-news:before {
-	@include icon('news','1');
+    @include icon('news','1');
 }
 .ddgsi-next:before {
-	@include icon('next','1');
+    @include icon('next','1');
 }
 .ddgsi-pause:before {
-	@include icon('pause','1');
+    @include icon('pause','1');
 }
 .ddgsi-play:before {
-	@include icon('play','1');
+    @include icon('play','1');
 }
 .ddgsi-plus:before {
-	@include icon('plus','1');
+    @include icon('plus','1');
 }
 .ddgsi-prev:before {
-	@include icon('prev','1');
+    @include icon('prev','1');
 }
 .ddgsi-region:before {
-	@include icon('region','1');
+    @include icon('region','1');
 }
 .ddgsi-right-big:before {
-	@include icon('right-big','1');
+    @include icon('right-big','1');
 }
 .ddgsi-right-sign:before {
-	@include icon('right-sign','1');
+    @include icon('right-sign','1');
 }
 .ddgsi-right:before {
-	@include icon('right','1');
+    @include icon('right','1');
 }
 .ddgsi-smile:before {
-	@include icon('smile','1');
+    @include icon('smile','1');
 }
 .ddgsi-star:before {
-	@include icon('star','1');
+    @include icon('star','1');
 }
 .ddgsi-swap:before {
-	@include icon('swap','1');
+    @include icon('swap','1');
 }
 .ddgsi-t-down:before {
-	@include icon('t-down','1');
+    @include icon('t-down','1');
 }
 .ddgsi-t-left:before {
-	@include icon('t-left','1');
+    @include icon('t-left','1');
 }
 .ddgsi-t-right:before {
-	@include icon('t-right','1');
+    @include icon('t-right','1');
 }
 .ddgsi-t-up:before {
-	@include icon('t-up','1');
+    @include icon('t-up','1');
 }
 .ddgsi-twitter:before {
-	@include icon('twitter','1');
+    @include icon('twitter','1');
 }
 .ddgsi-up:before {
-	@include icon('up','1');
+    @include icon('up','1');
 }
 .ddgsi-upload:before {
-	@include icon('upload','1');
+    @include icon('upload','1');
 }
 .ddgsi-uploaded:before {
-	@include icon('uploaded','1');
+    @include icon('uploaded','1');
 }
 .ddgsi-user:before {
-	@include icon('user','1');
+    @include icon('user','1');
 }
 .ddgsi-users:before {
-	@include icon('users','1');
+    @include icon('users','1');
 }
