@@ -73,14 +73,10 @@
         
         font-weight: 600;
         
-        &:hover, &:focus {
+        &:hover, &:focus, &:active {
             color: $white;
             background-color: $blue-dark;
             border-color: $blue-dark;
-        }
-        &:active {
-            background-color: $blue-darker;
-            border-color: $blue-darker;
         }
     }
     
