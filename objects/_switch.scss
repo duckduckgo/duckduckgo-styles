@@ -1,11 +1,16 @@
 /*
     On/Off Switch
-*/
+ */
 
 $switch-height: 16px;
+$switch-height-large: 24px;
 $switch-width: 26px;
+$switch-width-with-icon: 32px;
+$switch-width-large: 44px;
 $switch-inner-padding: 2px;
 $switch-knob-size: $switch-height - ($switch-inner-padding * 2);
+$switch-knob-size-large: $switch-height-large - ($switch-inner-padding * 2);
+$switch-checkmark-icon-size: 12px;
 
 .switch {
     @include border-radius(10px);
@@ -14,21 +19,75 @@ $switch-knob-size: $switch-height - ($switch-inner-padding * 2);
     width: $switch-width;
     background: $grey-light;
     cursor: pointer;
+
     &.is-on {
         background: $blue;
     }
 }
-    .switch__knob {
-        @include border-radius($switch-height / 2);
-        @include single-transition(0.1s linear left);
+
+.switch__knob {
+    @include border-radius(50%);
+    @include single-transition(0.1s linear left);
+    position: absolute;
+    display: block;
+    left: $switch-inner-padding;
+    top: $switch-inner-padding;
+    height: $switch-knob-size;
+    width: $switch-knob-size;
+    background-color: $white;
+
+    .is-on & {
+        left: $switch-width - $switch-knob-size - $switch-inner-padding;
+    }
+}
+
+.switch--checkmark {
+    width: $switch-width-with-icon;
+
+    &::before {
+        font-family: 'ddg-serp-icons';
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\2713";
         position: absolute;
-        display: block;
-        left: $switch-inner-padding;
-        top: $switch-inner-padding;
-        height: $switch-knob-size;
-        width: $switch-knob-size;
-        background-color: $white;
-        .is-on & {
-            left: $switch-width - $switch-knob-size - $switch-inner-padding;
+        top: $switch-knob-size / 2 - $switch-checkmark-icon-size / 2 + $switch-inner-padding;
+        left: $switch-knob-size / 2 - $switch-checkmark-icon-size / 2 + $switch-inner-padding + 3px;
+        color: #fff;
+        font-size: 12px;
+        line-height: 1;
+        opacity: 0;
+        transition: opacity 300ms ease-in;
+    }
+
+    &.switch--large::before {
+        top: $switch-knob-size-large / 2 - $switch-checkmark-icon-size / 2 + $switch-inner-padding;
+        left: $switch-knob-size-large / 2 - $switch-checkmark-icon-size / 2 + $switch-inner-padding + 1px;
+    }
+
+    &.is-on {
+        &::before{
+            opacity: 1;
+        }
+
+        .switch__knob {
+            left: $switch-width-with-icon - $switch-knob-size - $switch-inner-padding;
         }
     }
+}
+
+.switch--large {
+    @include border-radius(30px);
+    height: $switch-height-large;
+    width: $switch-width-large;
+
+    .switch__knob {
+        height: $switch-knob-size-large;
+        width: $switch-knob-size-large;
+    }
+
+    &.is-on .switch__knob {
+        left: $switch-width-large - $switch-knob-size-large - $switch-inner-padding; 
+    }
+}
+
