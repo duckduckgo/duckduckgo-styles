@@ -30,7 +30,8 @@
 .btn, .button {
     @extend %btn;
     
-    &.is-disabled {
+    &.is-disabled, &.is-disabled:hover, &.is-disabled:active, &.is-disabled:focus {
+        cursor: default;
         border-color: $button-border-alt;
         background-color: $button-border-alt;
         color: #eee;
