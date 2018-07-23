@@ -8,7 +8,7 @@ $popover-shadow: 0 0 15px -3px rgba(0,0,0,0.35);
 
 .modal--popover {
     // default styles
-    @include transition(background 0.15s ease-out);
+    @include transition(background 0.15s ease-out, visibility 0.15s linear);
     display: table;
     overflow: hidden;
     visibility: hidden;
@@ -20,12 +20,12 @@ $popover-shadow: 0 0 15px -3px rgba(0,0,0,0.35);
     right: 0;
     left: 0;
     top: 0;
+    z-index: 300;
 
     &.is-showing {
         background: #ddd;
         background: rgba(white,0.7);
         visibility: visible;
-        z-index: 300;
 
         .modal__box {
             @include transform(scale(1));
@@ -91,6 +91,12 @@ $popover-shadow: 0 0 15px -3px rgba(0,0,0,0.35);
 .modal--popover--dk {
     &.is-showing {
         background: rgba(210,210,210,0.6);
+    }
+}
+
+.modal--popover--dark {
+    &.is-showing {
+        background: rgba(85, 85, 85, 0.9);
     }
 }
 
