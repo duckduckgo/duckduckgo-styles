@@ -195,6 +195,9 @@
     @if $symbol == 'twitter' {
         content: "\74";
     }
+    @if $symbol == 'unencrypted' {
+        content: "\1f51";
+    }
     @if $symbol == 'up' {
         content: "\5e";
     }
