@@ -95,10 +95,10 @@ $dark-nav-bg: #313235;
         padding-top: $double-unit;
         margin-bottom: -$three-quarter-unit;
     }
-    
+
 %nav-menu__item {
     position: relative;
-    font-size: $t-s;
+    font-size: $t-n;
 
     // more finger-friendly
     .is-mobile & {
