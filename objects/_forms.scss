@@ -209,7 +209,7 @@ $form-text-color: $dark;
     }
 .frm--newsletter {
     .frm__input {
-        @include border-radius($quarter-unit);
+        @include border-radius;
         vertical-align: top;
         width: 60%;
         max-width: 24em;
