@@ -44,7 +44,7 @@ $form-text-color: $dark;
         }
     
     .frm__input {
-        @include border-radius();
+        @include border-radius;
         height: 2em;
         line-height: 2em;
         padding-left: $small-unit;
@@ -79,12 +79,12 @@ $form-text-color: $dark;
             }
     .frm__text {
         padding: $small-unit;
-        @include border-radius();
+        @include border-radius;
     }
     
     .frm__select {
         @include box-sizing('border-box');
-        @include border-radius();
+        @include border-radius;
         display: inline-block;
         position: relative;
         overflow: hidden;
@@ -195,7 +195,7 @@ $form-text-color: $dark;
         }
     .frm__color__swatch {
         @include box-sizing('border-box');
-        @include border-radius(2px);
+        @include border-radius;
         cursor: pointer;
         display: block;
         width: 50px; // matches the on/off switch width, helps the forms look better aligned
