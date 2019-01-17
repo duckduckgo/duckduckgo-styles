@@ -13,12 +13,16 @@ $dark-nav-bg: #313235;
 %nav-menu {
     // stylish!
     background-color: $white;
+
     ul {
         padding-top: 0;
         padding-bottom: 0;
         list-style: none;
     }
-    li { list-style: none; }
+
+    li {
+        list-style: none;
+    }
 }
 
 .nav-menu {
