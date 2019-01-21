@@ -44,7 +44,10 @@ $form-text-color: $dark;
         }
     
     .frm__input {
-        @include border-radius;
+        @include border-radius();
+        .is-cssexp & {
+            @include  border-radius($exp-border-radius);
+        }
         height: 2em;
         line-height: 2em;
         padding-left: $small-unit;
@@ -79,7 +82,10 @@ $form-text-color: $dark;
             }
     .frm__text {
         padding: $small-unit;
-        @include border-radius;
+        @include border-radius();
+        .is-cssexp & {
+            @include  border-radius($exp-border-radius);
+        }
     }
     
     .frm__select {
@@ -195,7 +201,10 @@ $form-text-color: $dark;
         }
     .frm__color__swatch {
         @include box-sizing('border-box');
-        @include border-radius;
+        @include border-radius();
+        .is-cssexp & {
+            @include  border-radius($exp-border-radius);
+        }
         cursor: pointer;
         display: block;
         width: 50px; // matches the on/off switch width, helps the forms look better aligned
@@ -209,7 +218,10 @@ $form-text-color: $dark;
     }
 .frm--newsletter {
     .frm__input {
-        @include border-radius;
+        @include border-radius($quarter-unit);
+        .is-cssexp & {
+            @include  border-radius($exp-border-radius);
+        }
         vertical-align: top;
         width: 60%;
         max-width: 24em;
