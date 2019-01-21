@@ -15,6 +15,9 @@ $form-text-color: $dark;
         font-size: 0.9em;
         font-weight: 600;
         color: $form-text-color;
+        .is-cssexp & {
+            color: $exp-dark;
+        }
     }
         // checkboxes
         .frm__label__chk {
@@ -36,7 +39,10 @@ $form-text-color: $dark;
         background-color: $alt-bg;
         border: 1px solid $form-border-color;
         color: $form-text-color;
-        
+        .is-cssexp & {
+            color: $exp-dark;
+        }
+
         outline: none;
     }
         .frm__input--disabled {
@@ -74,6 +80,9 @@ $form-text-color: $dark;
                 cursor: pointer;
                 &:hover {
                     color: $form-text-color;
+                    .is-cssexp & {
+                        color: $exp-dark;
+                    }
                 }
             }
         }

@@ -171,10 +171,18 @@
     .btn--wire--dark {
         border-color: $dark;
         color: $dark;
+        .is-cssexp & {
+            border-color: $exp-dark;
+            color: $exp-dark;
+        }
 
         &:hover {
             border-color: $dark;
             background-color: $dark;
+            .is-cssexp & {
+                border-color: $exp-dark;
+                background-color: $exp-dark;
+            }
         }
     }
 

@@ -67,6 +67,9 @@ $modal-min-width: 160px;
 
     background-color: $modal-bg;
     color: $modal-text;
+    .is-cssexp & {
+        color: $exp-dark;
+    }
     min-width: $modal-min-width;
 
     white-space: normal;
