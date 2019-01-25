@@ -15,6 +15,7 @@ $form-text-color: $dark;
         font-size: 0.9em;
         font-weight: 600;
         color: $form-text-color;
+
         .is-cssexp & {
             color: $exp-dark;
         }
@@ -92,6 +93,7 @@ $form-text-color: $dark;
     .frm__text {
         padding: $small-unit;
         @include border-radius();
+
         .is-cssexp & {
             @include  border-radius($exp-border-radius);
         }
@@ -105,7 +107,7 @@ $form-text-color: $dark;
         overflow: hidden;
 
         .is-cssexp & {
-            @includ border-radius($exp-border-radius);
+            @include border-radius($exp-border-radius);
         }
         
         line-height: 2.2;
