@@ -103,6 +103,10 @@ $form-text-color: $dark;
         display: inline-block;
         position: relative;
         overflow: hidden;
+
+        .is-cssexp & {
+            @includ border-radius($exp-border-radius);
+        }
         
         line-height: 2.2;
         height: 2.35em;
