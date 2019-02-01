@@ -13,11 +13,11 @@ Loader animation
 
     .is-loading & {
         display: block;
-        @include animation(loader-animate 0.5s steps(15) infinite);
+        animation: loader-animate 0.5s steps(15) infinite;
     }
 }
 
-@include keyframes(loader-animate) {
+@keyframes loader-animate {
     0% {
         background-position: left;
     }
