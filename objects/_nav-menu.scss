@@ -1,6 +1,6 @@
 /*
     Nav Menu Styling
-    
+
     The .nav-menu object assumes that the navigation is vertical.
     (.e.g slideout, dropdown)
 */
@@ -14,12 +14,19 @@ $dark-nav-bg: #313235;
     // stylish!
     background-color: $silver;
     background-color: rgba($silver,0.975);
+    .is-cssexp & {
+        background-color: $white;
+    }
+
     ul {
         padding-top: 0;
         padding-bottom: 0;
         list-style: none;
     }
-    li { list-style: none; }
+
+    li {
+        list-style: none;
+    }
 }
 
 .nav-menu {
@@ -28,7 +35,7 @@ $dark-nav-bg: #313235;
 
 .nav-menu__icon {
     @extend %no-select !optional;
-    text-align: center; 
+    text-align: center;
     color: $icon-color;
     font-size: $icon-size;
     line-height: 1;
@@ -46,7 +53,7 @@ $dark-nav-bg: #313235;
     z-index: 2;
     &:hover,
     &:focus {
-        color: #575757; 
+        color: #575757;
     }
     &:active {
         color: $icon-color;
@@ -56,7 +63,7 @@ $dark-nav-bg: #313235;
     }
 }
 .nav-menu__close {
-    @extend .nav-menu__icon;  
+    @extend .nav-menu__icon;
     @extend .nav-menu__icon--top-right;
     @extend .nav-menu__icon--clickable;
     @include icon();
@@ -75,7 +82,7 @@ $dark-nav-bg: #313235;
         top: -0.45em;
     }
 }
-    
+
 .nav-menu__heading {
     padding-top: $base-unit * 2.2;
     padding-bottom: $base-unit * 1.6;
@@ -95,10 +102,13 @@ $dark-nav-bg: #313235;
         padding-top: $double-unit;
         margin-bottom: -$three-quarter-unit;
     }
-    
+
 %nav-menu__item {
     position: relative;
     font-size: $t-s;
+    .is-cssexp & {
+        font-size: $t-n;
+    }
 
     // more finger-friendly
     .is-mobile & {
@@ -200,7 +210,7 @@ $dark-nav-bg: #313235;
 /*
     Layout Options
 */
-    
+
 .nav-menu--slideout {
     @extend %nav-menu;
     //@extend .nav-menu--dark;
@@ -210,23 +220,23 @@ $dark-nav-bg: #313235;
     @include transform-style;
     @include box-shadow(-1px 0 1px rgba(0,0,0,0.2));
     width: $slideout-nav-width;
-    
+
     display: block; // show by default so that the animation will work
 
-    // extend off the bottom of the page so that it doesn't render weird 
-    // on mobile screens that 'slide' the viewport 
+    // extend off the bottom of the page so that it doesn't render weird
+    // on mobile screens that 'slide' the viewport
 
     height: 100%;
-    
+
     /* this slideout is aligned to the right of the screen by default */
     position: fixed;
-    
+
     top: 0;
     bottom: 0;
     right: -$slideout-nav-width - $quarter-unit;
     left: auto;
     z-index: 200; // needs to be more than 100 so that it covers the fixed header
-    
+
     .nav-menu__list {
         padding-left: $base-unit * 1.5;
         position: absolute;
@@ -237,12 +247,12 @@ $dark-nav-bg: #313235;
         left: 0;
         top: 0;
     }
-    
+
     &.is-open {
         right: 0;
         @include transform( translate3d(0, 0, 0), true );
     }
-    // look for the modernizr class to confirm support for 3d transforms, 
+    // look for the modernizr class to confirm support for 3d transforms,
     // reset the positioning if available
     .csstransforms3d & {
         right: 0;

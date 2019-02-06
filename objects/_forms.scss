@@ -15,6 +15,10 @@ $form-text-color: $dark;
         font-size: 0.9em;
         font-weight: 600;
         color: $form-text-color;
+
+        .is-cssexp & {
+            color: $exp-dark;
+        }
     }
         // checkboxes
         .frm__label__chk {
@@ -36,7 +40,10 @@ $form-text-color: $dark;
         background-color: $alt-bg;
         border: 1px solid $form-border-color;
         color: $form-text-color;
-        
+        .is-cssexp & {
+            color: $exp-dark;
+        }
+
         outline: none;
     }
         .frm__input--disabled {
@@ -45,6 +52,9 @@ $form-text-color: $dark;
     
     .frm__input {
         @include border-radius();
+        .is-cssexp & {
+            @include  border-radius($exp-border-radius);
+        }
         height: 2em;
         line-height: 2em;
         padding-left: $small-unit;
@@ -71,6 +81,9 @@ $form-text-color: $dark;
                 cursor: pointer;
                 &:hover {
                     color: $form-text-color;
+                    .is-cssexp & {
+                        color: $exp-dark;
+                    }
                 }
             }
         }
@@ -80,14 +93,22 @@ $form-text-color: $dark;
     .frm__text {
         padding: $small-unit;
         @include border-radius();
+
+        .is-cssexp & {
+            @include  border-radius($exp-border-radius);
+        }
     }
     
     .frm__select {
         @include box-sizing('border-box');
-        @include border-radius();
+        @include border-radius;
         display: inline-block;
         position: relative;
         overflow: hidden;
+
+        .is-cssexp & {
+            @include border-radius($exp-border-radius);
+        }
         
         line-height: 2.2;
         height: 2.35em;
@@ -195,7 +216,10 @@ $form-text-color: $dark;
         }
     .frm__color__swatch {
         @include box-sizing('border-box');
-        @include border-radius(2px);
+        @include border-radius();
+        .is-cssexp & {
+            @include  border-radius($exp-border-radius);
+        }
         cursor: pointer;
         display: block;
         width: 50px; // matches the on/off switch width, helps the forms look better aligned
@@ -210,6 +234,9 @@ $form-text-color: $dark;
 .frm--newsletter {
     .frm__input {
         @include border-radius($quarter-unit);
+        .is-cssexp & {
+            @include  border-radius($exp-border-radius);
+        }
         vertical-align: top;
         width: 60%;
         max-width: 24em;
