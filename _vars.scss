@@ -26,6 +26,7 @@ $hero-link: lighten($red-light,30%);
 $hero-link-dark: #5C2D1E;
 
 $dark: $slate;
+$exp-dark: #222;
 $dark-alt: $slate-light;
 $light: $grey-dark;
 $light-alt: $grey-light;
@@ -70,3 +71,4 @@ $landscape2-width:  $media--xs !default;
 
 // Set the default border radius
 $default-border-radius: 2px;
+$exp-border-radius: 4px;
