@@ -1,6 +1,6 @@
 /*
     Forms
-    
+
     For anything that isn't the search form
     (Newsletter signup, etc)
 */
@@ -28,7 +28,7 @@ $form-text-color: $dark;
             display: inline-block;
             overflow: hidden;
         }
-    
+
     .frm__text,
     .frm__input {
         @include box-sizing('border-box');
@@ -79,53 +79,45 @@ $form-text-color: $dark;
             }
     .frm__text {
         padding: $small-unit;
-        @include border-radius();
-
-        .is-cssexp & {
-            @include  border-radius($exp-border-radius);
-        }
+        border-radius: $default-border-radius;
     }
-    
+
     .frm__select {
         @include box-sizing('border-box');
-        @include border-radius;
+        border-radius: $default-border-radius;
         display: inline-block;
         position: relative;
         overflow: hidden;
 
-        .is-cssexp & {
-            @include border-radius($exp-border-radius);
-        }
-        
         line-height: 2.2;
         height: 2.35em;
 
         border: 1px solid $button-border;
         background-color: $button-bg;
         color: $button-color;
-        
+
         padding: 0;
         vertical-align: middle;
         margin-bottom: 0;
         cursor: pointer;
-        
+
         &:hover {
             background-color: $white;
         }
-        
+
         select {
             @include experimental(appearance, none);
             background: none;
             cursor: pointer;
-            
+
             margin: 0;
             padding: 0 28px 0 $three-quarter-unit;
             position: relative;
             display: block;
-            
+
             font-size: 1em;
             line-height: inherit;
-            
+
             // yucky hacks to override browser junk
             min-width: 10em;
             width: 140% !important;
@@ -137,31 +129,31 @@ $form-text-color: $dark;
                 padding-bottom: 0.4em;
             }
         }
-        
+
         &:after {
             @include icon('down');
-            
+
             margin-top: -5px;
             font-size: 12px;
             line-height: 1;
-            
+
             pointer-events: none;
             vertical-align: middle;
             display: inline-block;
-            
+
             position: absolute;
             right: 10px;
             top: 50%;
         }
     }
-    
+
     .frm__select--no-first {
         // on FF and Chrome this hides the first selection
         select option:first-child {
             display: none;
         }
     }
-    
+
     .frm__buttons {
         clear: both;
         padding-top: $base-unit;
@@ -260,7 +252,7 @@ $form-text-color: $dark;
         display: block;
         width: 100%;
     }
-    
+
     .frm__label {
         margin-top: $big-unit;
         margin-bottom: $half-unit;
