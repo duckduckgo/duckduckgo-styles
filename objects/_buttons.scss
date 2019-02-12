@@ -133,10 +133,7 @@
     }
 
     .btn--wire {
-        @include border-radius(2px);
-        .is-cssexp & {
-            @include  border-radius($exp-border-radius);
-        }
+        border-radius: $exp-border-radius;
         background: none;
         background-color: transparent;
         font-weight: normal;
@@ -151,10 +148,7 @@
     }
 
     .btn--wire--hero {
-        @include border-radius(6px);
-        .is-cssexp & {
-            @include  border-radius($exp-border-radius);
-        }
+        border-radius: $exp-border-radius;
         background: none;
         background-color: transparent;
         border: 2px solid $white;
@@ -171,18 +165,10 @@
     .btn--wire--dark {
         border-color: $dark;
         color: $dark;
-        .is-cssexp & {
-            border-color: $exp-dark;
-            color: $exp-dark;
-        }
 
         &:hover {
             border-color: $dark;
             background-color: $dark;
-            .is-cssexp & {
-                border-color: $exp-dark;
-                background-color: $exp-dark;
-            }
         }
     }
 
@@ -190,10 +176,7 @@
         @extend %btn--base;
         @include icon();
         @include transition(background-color 0.1s, color 0.1s);
-        @include border-radius(2px);
-        .is-cssexp & {
-            @include  border-radius($exp-border-radius);
-        }
+        border-radius: $exp-border-radius;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
 
         padding: 0;
