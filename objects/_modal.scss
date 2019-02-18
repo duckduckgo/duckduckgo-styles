@@ -10,8 +10,7 @@ $modal-text: $dark;
 $modal-header-bg: $silver-light;
 $modal-border: $platinum;
 $modal-border-width: 1px;
-$modal-border-radius: 2px;
-$exp-modal-border-radius: 4px;
+$modal-border-radius: 4px;
 
 $modal-min-width: 160px;
 
@@ -58,12 +57,8 @@ $modal-min-width: 160px;
 
 .modal__box {
     @include border-radius($modal-border-radius);
-    .is-cssexp & {
-        @include border-radius($exp-modal-border-radius);
-
-        // ensure border-radius clips inner content
-        overflow:hidden;
-    }
+    // ensure border-radius clips inner content
+    overflow:hidden;
 
     background-color: $modal-bg;
     color: $modal-text;
@@ -105,19 +100,11 @@ $modal-min-width: 160px;
 .modal__header {
     border-top-right-radius: $modal-border-radius;
     border-top-left-radius: $modal-border-radius;
-    .is-cssexp & {
-        border-top-right-radius: $exp-modal-border-radius;
-        border-top-left-radius: $exp-modal-border-radius;
-    }
 }
 
 .modal__footer {
     border-bottom-right-radius: $modal-border-radius;
     border-bottom-left-radius: $modal-border-radius;
-    .is-cssexp & {
-        border-bottom-right-radius: $exp-modal-border-radius;
-        border-bottom-left-radius: $exp-modal-border-radius;
-    }
 }
 
     .modal__header__title {
