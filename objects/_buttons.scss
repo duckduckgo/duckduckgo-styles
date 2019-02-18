@@ -133,7 +133,7 @@
     }
 
     .btn--wire {
-        border-radius: $exp-border-radius;
+        border-radius: $radius;
         background: none;
         background-color: transparent;
         font-weight: normal;
@@ -148,7 +148,7 @@
     }
 
     .btn--wire--hero {
-        border-radius: $exp-border-radius;
+        border-radius: $radius;
         background: none;
         background-color: transparent;
         border: 2px solid $white;
