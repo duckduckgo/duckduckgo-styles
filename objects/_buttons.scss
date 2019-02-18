@@ -176,7 +176,7 @@
         @extend %btn--base;
         @include icon();
         @include transition(background-color 0.1s, color 0.1s);
-        border-radius: $exp-border-radius;
+        border-radius: $radius;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
 
         padding: 0;
