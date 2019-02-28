@@ -58,18 +58,8 @@ $modal-min-width: 160px;
 
 .modal__box {
     @include border-radius($modal-border-radius);
-    .is-cssexp & {
-        @include border-radius($exp-modal-border-radius);
-
-        // ensure border-radius clips inner content
-        overflow:hidden;
-    }
-
     background-color: $modal-bg;
-    color: $modal-text;
-    .is-cssexp & {
-        color: $exp-dark;
-    }
+    color: $dark;
     min-width: $modal-min-width;
 
     white-space: normal;
