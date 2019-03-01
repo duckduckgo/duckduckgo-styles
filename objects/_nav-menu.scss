@@ -11,12 +11,7 @@ $icon-color: #bfbfbf;
 $dark-nav-bg: #313235;
 
 %nav-menu {
-    // stylish!
-    background-color: $silver;
-    background-color: rgba($silver,0.975);
-    .is-cssexp & {
-        background-color: $white;
-    }
+    background-color: $white;
 
     ul {
         padding-top: 0;
@@ -105,10 +100,7 @@ $dark-nav-bg: #313235;
 
 %nav-menu__item {
     position: relative;
-    font-size: $t-s;
-    .is-cssexp & {
-        font-size: $t-n;
-    }
+    font-size: $t-n;
 
     // more finger-friendly
     .is-mobile & {
