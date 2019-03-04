@@ -59,7 +59,6 @@ $modal-min-width: 160px;
     @include border-radius($modal-border-radius);
     // ensure border-radius clips inner content
     overflow:hidden;
-    color: $dark;
     background-color: $modal-bg;
     color: $modal-text;
     min-width: $modal-min-width;
