@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'ddg-serp-icons';
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9250390538945794');
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9250390538945794#iefix') format('embedded-opentype'),
-    url($asset-path + '/font/ddg-serp-icons.svg?v=0.9250390538945794#ddg-serp-icons') format('svg'),
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.1536722642870716');
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.1536722642870716#iefix') format('embedded-opentype'),
+    url($asset-path + '/font/ddg-serp-icons.svg?v=0.1536722642870716#ddg-serp-icons') format('svg'),
     url($ddg-serp-icons-woff-base64) format('woff'),
-    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.9250390538945794') format('truetype');
+    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.1536722642870716') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -61,6 +61,9 @@
 }
 .ddgsi-cloudsave:before {
     @include icon('cloudsave','1');
+}
+.ddgsi-cog:before {
+    @include icon('cog','1');
 }
 .ddgsi-collapse:before {
     @include icon('collapse','1');

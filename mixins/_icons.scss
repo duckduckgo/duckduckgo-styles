@@ -60,6 +60,9 @@
     @if $symbol == 'cloudsave' {
         content: "\63";
     }
+    @if $symbol == 'cog' {
+        content: "\2699";
+    }
     @if $symbol == 'collapse' {
         content: "\21f1";
     }
