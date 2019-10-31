@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'ddg-serp-icons';
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.04282170880471581');
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.04282170880471581#iefix') format('embedded-opentype'),
-    url($asset-path + '/font/ddg-serp-icons.svg?v=0.04282170880471581#ddg-serp-icons') format('svg'),
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.30037563264585043');
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.30037563264585043#iefix') format('embedded-opentype'),
+    url($asset-path + '/font/ddg-serp-icons.svg?v=0.30037563264585043#ddg-serp-icons') format('svg'),
     url($ddg-serp-icons-woff-base64) format('woff'),
-    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.04282170880471581') format('truetype');
+    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.30037563264585043') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -28,6 +28,9 @@
 }
 .ddgsi-arrow-down:before {
     @include icon('arrow-down','1');
+}
+.ddgsi-arrow-left-bold:before {
+    @include icon('arrow-left-bold','1');
 }
 .ddgsi-arrow-left:before {
     @include icon('arrow-left','1');

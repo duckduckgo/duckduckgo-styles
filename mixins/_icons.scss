@@ -27,6 +27,9 @@
     @if $symbol == 'arrow-down' {
         content: "\2193";
     }
+    @if $symbol == 'arrow-left-bold' {
+        content: "\2b05";
+    }
     @if $symbol == 'arrow-left' {
         content: "\2190";
     }
