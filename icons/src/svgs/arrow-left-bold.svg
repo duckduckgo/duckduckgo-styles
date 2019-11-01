@@ -1,3 +1,11 @@
-<svg width="20px" height="18px" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.343 10l5.364 5.364a1 1 0 0 1-1.414 1.414L.222 9.708a1 1 0 0 1 0-1.415l7.07-7.071a1 1 0 1 1 1.415 1.414L3.343 8H19a1 1 0 0 1 0 2H3.343z" fill="#000" fill-rule="evenodd"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Sidebar CTA</title>
+    <desc>Created with Sketch.</desc>
+    <g id="SERP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Autocomplete" transform="translate(-65.000000, -18.000000)" fill="#222222">
+            <path d="M72,17.9289322 L73.4142136,19.3431458 L68.7569322,23.9999322 L81,24 L81,26 L68.7579322,25.9999322 L73.4142136,30.6568542 L72,32.0710678 L64.9289322,25 L66.3431458,23.5857864 L66.3439322,23.5859322 L72,17.9289322 Z" id="Sidebar-CTA"></path>
+        </g>
+    </g>
 </svg>
