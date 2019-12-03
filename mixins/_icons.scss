@@ -39,6 +39,9 @@
     @if $symbol == 'arrow-top' {
         content: "\2b06";
     }
+    @if $symbol == 'arrow-up-left' {
+        content: "\2196";
+    }
     @if $symbol == 'arrow-up' {
         content: "\2191";
     }
