@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'ddg-serp-icons';
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9250390538945794');
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9250390538945794#iefix') format('embedded-opentype'),
-    url($asset-path + '/font/ddg-serp-icons.svg?v=0.9250390538945794#ddg-serp-icons') format('svg'),
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.5388352849692661');
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.5388352849692661#iefix') format('embedded-opentype'),
+    url($asset-path + '/font/ddg-serp-icons.svg?v=0.5388352849692661#ddg-serp-icons') format('svg'),
     url($ddg-serp-icons-woff-base64) format('woff'),
-    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.9250390538945794') format('truetype');
+    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.5388352849692661') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -82,6 +82,9 @@
 }
 .ddgsi-expand:before {
     @include icon('expand','1');
+}
+.ddgsi-external:before {
+    @include icon('external','1');
 }
 .ddgsi-eye:before {
     @include icon('eye','1');
