@@ -81,6 +81,9 @@
     @if $symbol == 'expand' {
         content: "\21f2";
     }
+    @if $symbol == 'external' {
+        content: "\2197";
+    }
     @if $symbol == 'eye' {
         content: "\69";
     }
