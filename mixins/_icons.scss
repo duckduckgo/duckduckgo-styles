@@ -99,6 +99,9 @@
     @if $symbol == 'home' {
         content: "\2302";
     }
+    @if $symbol == 'horn' {
+        content: "\48";
+    }
     @if $symbol == 'info' {
         content: "\49";
     }
