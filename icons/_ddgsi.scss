@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'ddg-serp-icons';
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.8423899215037549');
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.8423899215037549#iefix') format('embedded-opentype'),
-    url($asset-path + '/font/ddg-serp-icons.svg?v=0.8423899215037549#ddg-serp-icons') format('svg'),
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.47445676176797047');
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.47445676176797047#iefix') format('embedded-opentype'),
+    url($asset-path + '/font/ddg-serp-icons.svg?v=0.47445676176797047#ddg-serp-icons') format('svg'),
     url($ddg-serp-icons-woff-base64) format('woff'),
-    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.8423899215037549') format('truetype');
+    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.47445676176797047') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -109,6 +109,9 @@
 }
 .ddgsi-home:before {
     @include icon('home','1');
+}
+.ddgsi-horn:before {
+    @include icon('horn','1');
 }
 .ddgsi-info:before {
     @include icon('info','1');
