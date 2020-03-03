@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'ddg-serp-icons';
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.6731458607012459');
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.6731458607012459#iefix') format('embedded-opentype'),
-    url($asset-path + '/font/ddg-serp-icons.svg?v=0.6731458607012459#ddg-serp-icons') format('svg'),
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.8642601561168377');
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.8642601561168377#iefix') format('embedded-opentype'),
+    url($asset-path + '/font/ddg-serp-icons.svg?v=0.8642601561168377#ddg-serp-icons') format('svg'),
     url($ddg-serp-icons-woff-base64) format('woff'),
-    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.6731458607012459') format('truetype');
+    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.8642601561168377') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,6 +29,9 @@
 .ddgsi-arrow-down:before {
     @include icon('arrow-down','1');
 }
+.ddgsi-arrow-left-bold:before {
+    @include icon('arrow-left-bold','1');
+}
 .ddgsi-arrow-left:before {
     @include icon('arrow-left','1');
 }
@@ -37,6 +40,9 @@
 }
 .ddgsi-arrow-top:before {
     @include icon('arrow-top','1');
+}
+.ddgsi-arrow-up-left:before {
+    @include icon('arrow-up-left','1');
 }
 .ddgsi-arrow-up:before {
     @include icon('arrow-up','1');
@@ -61,6 +67,9 @@
 }
 .ddgsi-cloudsave:before {
     @include icon('cloudsave','1');
+}
+.ddgsi-cog:before {
+    @include icon('cog','1');
 }
 .ddgsi-collapse:before {
     @include icon('collapse','1');
