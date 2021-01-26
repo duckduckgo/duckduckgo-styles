@@ -1,6 +1,6 @@
 {
   "name": "duckduckgo-styles",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "SCSS styling objects and variables used by DuckDuckGo",
   "main": "index.js",
   "scripts": {
