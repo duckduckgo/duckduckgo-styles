@@ -126,6 +126,9 @@
     @if $symbol == 'less-sign' {
         content: "\229d";
     }
+    @if $symbol == 'location' {
+        content: "\21d7";
+    }
     @if $symbol == 'lock' {
         content: "\6c";
     }

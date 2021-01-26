@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'ddg-serp-icons';
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.8642601561168377');
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.8642601561168377#iefix') format('embedded-opentype'),
-    url($asset-path + '/font/ddg-serp-icons.svg?v=0.8642601561168377#ddg-serp-icons') format('svg'),
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.500081605053595');
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.500081605053595#iefix') format('embedded-opentype'),
+    url($asset-path + '/font/ddg-serp-icons.svg?v=0.500081605053595#ddg-serp-icons') format('svg'),
     url($ddg-serp-icons-woff-base64) format('woff'),
-    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.8642601561168377') format('truetype');
+    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.500081605053595') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -127,6 +127,9 @@
 }
 .ddgsi-less-sign:before {
     @include icon('less-sign','1');
+}
+.ddgsi-location:before {
+    @include icon('location','1');
 }
 .ddgsi-lock:before {
     @include icon('lock','1');
