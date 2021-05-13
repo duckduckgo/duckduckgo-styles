@@ -75,6 +75,9 @@
     @if $symbol == 'comment' {
         content: "\4f";
     }
+    @if $symbol == 'copy' {
+        content: "\1f4c";
+    }
     @if $symbol == 'cry' {
         content: "\2639";
     }
@@ -191,6 +194,9 @@
     }
     @if $symbol == 'star' {
         content: "\2605";
+    }
+    @if $symbol == 'swap-2' {
+        content: "\21c4";
     }
     @if $symbol == 'swap' {
         content: "\21a9";
