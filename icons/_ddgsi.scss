@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'ddg-serp-icons';
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.500081605053595');
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.500081605053595#iefix') format('embedded-opentype'),
-    url($asset-path + '/font/ddg-serp-icons.svg?v=0.500081605053595#ddg-serp-icons') format('svg'),
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9312044774647603');
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9312044774647603#iefix') format('embedded-opentype'),
+    url($asset-path + '/font/ddg-serp-icons.svg?v=0.9312044774647603#ddg-serp-icons') format('svg'),
     url($ddg-serp-icons-woff-base64) format('woff'),
-    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.500081605053595') format('truetype');
+    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.9312044774647603') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -76,6 +76,9 @@
 }
 .ddgsi-comment:before {
     @include icon('comment','1');
+}
+.ddgsi-copy:before {
+    @include icon('copy','1');
 }
 .ddgsi-cry:before {
     @include icon('cry','1');
@@ -193,6 +196,9 @@
 }
 .ddgsi-star:before {
     @include icon('star','1');
+}
+.ddgsi-swap-2:before {
+    @include icon('swap-2','1');
 }
 .ddgsi-swap:before {
     @include icon('swap','1');
