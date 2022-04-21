@@ -189,6 +189,9 @@
     @if $symbol == 'right' {
         content: "\3e";
     }
+    @if $symbol == 'settings' {
+        content: "\2700";
+    }
     @if $symbol == 'smile' {
         content: "\29";
     }

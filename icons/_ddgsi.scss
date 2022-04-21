@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'ddg-serp-icons';
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9312044774647603');
-    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.9312044774647603#iefix') format('embedded-opentype'),
-    url($asset-path + '/font/ddg-serp-icons.svg?v=0.9312044774647603#ddg-serp-icons') format('svg'),
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.48457131068509884');
+    src:url($asset-path + '/font/ddg-serp-icons.eot?v=0.48457131068509884#iefix') format('embedded-opentype'),
+    url($asset-path + '/font/ddg-serp-icons.svg?v=0.48457131068509884#ddg-serp-icons') format('svg'),
     url($ddg-serp-icons-woff-base64) format('woff'),
-    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.9312044774647603') format('truetype');
+    url($asset-path + '/font/ddg-serp-icons.ttf?v=0.48457131068509884') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -190,6 +190,9 @@
 }
 .ddgsi-right:before {
     @include icon('right','1');
+}
+.ddgsi-settings:before {
+    @include icon('settings','1');
 }
 .ddgsi-smile:before {
     @include icon('smile','1');
